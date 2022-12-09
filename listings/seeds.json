@@ -1,0 +1,62 @@
+[
+{
+  "model": "listings.listing",
+  "pk": 1,
+  "fields": {
+    "title": "iphone 8",
+    "description": "good condition, battery needs replacing",
+    "price": "300.00",
+    "location": "London",
+    "created_at": "2022-12-08T11:29:39.450Z",
+    "condition": 5,
+    "subcategory": 1,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 2,
+  "fields": {
+    "title": "water bottle",
+    "description": "selling a used water bottle, 500ml, lid doesn't work",
+    "price": "5.00",
+    "location": "London",
+    "created_at": "2022-12-08T11:42:27.500Z",
+    "condition": 6,
+    "subcategory": 5,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 4,
+  "fields": {
+    "title": "ford focus 2006",
+    "description": "120k miles, petrol 1.6L, manual, ULEZ compliant, starts and runs well, A/C, electric windows, sun roof.",
+    "price": "1200.00",
+    "location": "London",
+    "created_at": "2022-12-08T14:47:17.858Z",
+    "condition": 4,
+    "subcategory": 4,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 5,
+  "fields": {
+    "title": "PS5 brand new",
+    "description": "Brand new sealed ps5\r\ncome with 2 games \r\ndisc version",
+    "price": "450.00",
+    "location": "London",
+    "created_at": "2022-12-08T19:20:47.357Z",
+    "condition": 1,
+    "subcategory": 2,
+    "featured": false,
+    "sold": false
+  }
+}
+]

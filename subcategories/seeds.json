@@ -1,0 +1,42 @@
+[
+{
+  "model": "subcategories.subcategory",
+  "pk": 1,
+  "fields": {
+    "name": "Mobile Phones & Communications",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Video Games & Consoles",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Cameras & Photography",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 4,
+  "fields": {
+    "name": "Cars",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 5,
+  "fields": {
+    "name": "Sporting Goods",
+    "categories": 4
+  }
+}
+]

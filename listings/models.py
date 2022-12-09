@@ -10,14 +10,19 @@ class Listing(models.Model):
     location = models.CharField(max_length=8)
     created_at = models.DateTimeField(auto_now_add=True)
     condition = models.ForeignKey(
-      'conditions.Condition',
-      related_name='listings',
-      on_delete=models.DO_NOTHING
+        'conditions.Condition',
+        related_name='listings',
+        on_delete=models.DO_NOTHING
     )
     subcategory = models.ForeignKey(
-      'subcategories.Subcategory',
-      related_name='listings',
-      on_delete=models.DO_NOTHING
+        'subcategories.Subcategory',
+        related_name='listings',
+        on_delete=models.DO_NOTHING
+    )
+    owner = models.ForeignKey(
+        'jwt_auth.User',
+        related_name='comments',
+        on_delete=models.CASCADE
     )
     featured = models.BooleanField(default=False)
     sold = models.BooleanField(default=False)
@@ -29,5 +34,4 @@ class Listing(models.Model):
   # add 
   # images
   # owner
-  # condition
   # updated_at

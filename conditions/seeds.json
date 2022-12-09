@@ -1,0 +1,44 @@
+[
+{
+  "model": "conditions.condition",
+  "pk": 1,
+  "fields": {
+    "name": "New"
+  }
+},
+{
+  "model": "conditions.condition",
+  "pk": 2,
+  "fields": {
+    "name": "Excellent"
+  }
+},
+{
+  "model": "conditions.condition",
+  "pk": 3,
+  "fields": {
+    "name": "Very Good"
+  }
+},
+{
+  "model": "conditions.condition",
+  "pk": 4,
+  "fields": {
+    "name": "Good"
+  }
+},
+{
+  "model": "conditions.condition",
+  "pk": 5,
+  "fields": {
+    "name": "Used"
+  }
+},
+{
+  "model": "conditions.condition",
+  "pk": 6,
+  "fields": {
+    "name": "Poor"
+  }
+}
+]

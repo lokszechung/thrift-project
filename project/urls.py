@@ -21,5 +21,6 @@ urlpatterns = [
     path('listings/', include('listings.urls')),
     path('conditions/', include('conditions.urls')),
     path('subcategories/', include('subcategories.urls')),
-    path('categories/', include('categories.urls'))
+    path('categories/', include('categories.urls')),
+    path('auth/', include('jwt_auth.urls'))
 ]

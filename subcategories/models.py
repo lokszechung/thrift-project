@@ -9,4 +9,4 @@ class Subcategory(models.Model):
       on_delete=models.DO_NOTHING
     )
     def __str__(self):
-        return self.name
+        return f"{self.categories} - {self.name}"
