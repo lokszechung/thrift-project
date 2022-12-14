@@ -12,6 +12,9 @@ from datetime import datetime, timedelta
 import jwt
 from django.conf import settings
 
+from rest_framework.exceptions import NotFound
+from .serializers.populated import PopulatedUserSerializer
+
 User = get_user_model()
 # Create your views here.
 
@@ -56,3 +59,26 @@ class LoginView(APIView):
             'message': f'Welcome back, {user_to_login.first_name}',
             'token': token
         }, status.HTTP_202_ACCEPTED)
+
+
+class UserListView(APIView):
+
+    def get(self, _request):
+        users = User.objects.all()
+        try:
+            populated_serialized_users = PopulatedUserSerializer(users, many=True)
+            return Response(populated_serialized_users.data)
+        except Exception as e:
+            return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class UserDetailView(APIView):
+
+    def get(self, _request, pk):
+        user = User.objects.get(pk=pk)
+        try:
+            populated_serialized_user = PopulatedUserSerializer(user)
+            return Response(populated_serialized_user.data)
+        except User.DoesNotExist as e:
+            raise NotFound(str(e))
+        except Exception as e:
+            return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)

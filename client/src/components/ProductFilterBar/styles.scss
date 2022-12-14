@@ -1,0 +1,68 @@
+.filter-bar-container {
+  width: 350px;
+  padding: 40px 35px 10px;
+  background: white;
+  z-index: 10;
+
+  &.modal-view {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+
+    &.closed {
+      display: none
+    }
+  }
+
+  .category-selection {
+    margin-bottom: 50px
+  }
+
+  .checkbox-row {
+    display: flex;
+    margin-bottom: 5px;
+
+    input {
+      margin-right: 14px;
+    }
+  }
+
+  .secondary-filter-title {
+    margin: 30px 0 12px
+  }
+
+  h6 {
+    margin-bottom: 20px
+  }
+
+  ul > .category-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+
+    &.selected {
+      font-weight: bold;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      color: rgb(138, 138, 138)
+    }
+
+  }
+
+  .action-buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+}
+

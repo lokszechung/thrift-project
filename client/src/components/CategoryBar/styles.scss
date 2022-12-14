@@ -1,0 +1,23 @@
+.categoryBar {
+  overflow: hidden;
+
+  .bar-inner {
+    overflow: scroll;
+
+    > ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        flex-wrap: wrap;
+        padding: 16px 0;
+        min-width: 1200px;
+
+    span:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  }
+
+
+}

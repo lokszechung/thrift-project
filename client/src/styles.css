@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+  font-size: 27px;
+}
+
+h5 {
+  font-size: 23px
+}
+
+h6 {
+  font-size: 19px
+}
+
+p {
+  font-size: 14px;
+}
+
+span {
+    font-size: 13px;
+}

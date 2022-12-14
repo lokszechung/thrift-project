@@ -1,0 +1,36 @@
+.button-container {
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 100px;
+  text-align: center;
+  margin: 10px 0;
+  outline: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    background: black;
+    color: white;
+
+    &:hover {
+      background: rgb(38, 38, 38)
+    }
+  }
+
+  &.secondary {
+    background: white;
+    border: 2px solid black;
+
+    &:hover {
+      background: rgb(237, 237, 237)
+    }
+  }
+
+  &.margined-sides {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

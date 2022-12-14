@@ -1,0 +1,41 @@
+.image-card-container {
+  width: 275px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .image-container {
+    height: 275px;
+    width: 275px;
+
+    img {
+      object-fit: cover;
+      transition: all 200ms ease-in-out;
+      height: 100%;
+      width: 100%
+    }
+  }
+
+  .item-text {
+    padding: 10px 0px;
+
+    p {
+      font-weight: bold;
+
+      .seller {
+        color: grey;
+        font-weight: normal;
+        float: right;
+
+        a {
+          margin-left: 3px;
+        }
+      }
+    }
+
+
+  }
+
+
+}

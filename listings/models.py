@@ -19,9 +19,10 @@ class Listing(models.Model):
         related_name='listings',
         on_delete=models.DO_NOTHING
     )
+    image = models.CharField(max_length=1000, null=True)
     owner = models.ForeignKey(
         'jwt_auth.User',
-        related_name='comments',
+        related_name='listings',
         on_delete=models.CASCADE
     )
     featured = models.BooleanField(default=False)
@@ -32,6 +33,5 @@ class Listing(models.Model):
 
 
   # add 
-  # images
   # owner
   # updated_at

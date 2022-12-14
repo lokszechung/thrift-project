@@ -1,16 +1,19 @@
-import { useEffect } from 'react'
-import axios from 'axios'
+import {routes} from './routes';
+import {BrowserRouter as Router} from 'react-router-dom';
+import './styles.css';
+
+// components
+import NavBar from './components/NavBar';
+import CategoryBar from './components/CategoryBar';
 
 const App = () => {
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/products/') // * <-- replace with your endpoint
-      console.log(data)
-    }
-    getData()
-  })
+  return (
+    <Router>
+      <NavBar />
+      <CategoryBar />
+      {routes}
+    </Router>
+  );
+};
 
-  return <h1>Hello World</h1>
-}
-
-export default App
+export default App;

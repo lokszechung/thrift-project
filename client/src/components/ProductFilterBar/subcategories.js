@@ -1,0 +1,133 @@
+export const subcategories = {
+  'home&garden': [
+    'Furniture',
+    'Home Decor',
+    'Garden & Patio',
+    'DIY tools',
+    'Lighting',
+    'Cook, Dine & Bar',
+    'Home Office',
+    'Living Room',
+    'Bathroom',
+    'Bedding'
+  ],
+  electronics: [
+    'Appliances',
+    'Mobile Phones & Communication',
+    'Computing, Tablets & Networking',
+    'Sound & Vision',
+    'Video Games & Consoles',
+    'Cameras & Photography',
+    'Televisions',
+    'Smartwatches',
+    'GPS & In-car Technology',
+    'Smart Home & Surveillance',
+    'Heating, Cooling & Air'
+  ],
+  fashion: [
+    'Men’s Clothing',
+    'Women’s Clothing',
+    'Kids’ Clothing',
+    'Baby Clothing & Accessories',
+    'Shoes',
+    'Jewellery & Watches',
+    'Bags & Accessories',
+    'Fancy Dress & Costumes'
+  ],
+  'sports&leisure': [
+    'Sporting Goods',
+    'Fitness, Running & Yoga',
+    'Cycling & Scooters',
+    'Football',
+    'Golf',
+    'Skiing & Snowboarding',
+    'Water Sports',
+    'Camping & Hiking',
+    'Musical Instruments',
+    'Art & Craft',
+    'Other Sports'
+  ],
+  'health&beauty': [
+    'Health Care',
+    'Vitamins & Dietary Supplements',
+    'Oral Care',
+    'Natural & Alternative Remedies',
+    'Vision Care',
+    'Sports Supplements',
+    'Hair Care & Styling',
+    'Make-Up',
+    'Nail Care, Manicure & Pedicure',
+    'Fragrances',
+    'Facial Skin Care',
+    'Shaving & Hair Removal',
+    'Bath & Body',
+    'Sun Care & Tanning'
+  ],
+  toys: [
+    'Action Figures',
+    'Construction & Building Toys',
+    'Preschool & Pretend Play',
+    'Educational Toys',
+    'Creative Toys & Activities',
+    'Outdoor Toys & Activities ',
+    'Board Games',
+    'Toy Model Kits',
+    'Wargames & Role-playing Games',
+    'TV & Movie Character Toys',
+    'Remote-Controlled Toys',
+    'Diecast Vehicles, parts & Accessories'
+  ],
+  motors: [
+    'Cars & Vans',
+    'Motorbikes & Scooters',
+    'Caravans & Motorhomes',
+    'Other Vehicles',
+    'Car Parts & Accessories',
+    'Motorcycle Parts & Accessories',
+    'Caravan, Campervan & Motorhome Parts',
+    'Garage Equipment & Tools',
+    'Oils, Fluids & Lubricants',
+    'Vehicle Clothing, Protection & Merchandise'
+  ],
+  collectibles: [
+    'Trading Cards',
+    'Antiques',
+    'Pottery, Porcelain & Glass',
+    'Art',
+    'Dolls & Bears',
+    'Sports Memorabilia',
+    'Trains & Railway Models',
+    'Coins',
+    'Stamps',
+    'Other Collectibles'
+  ],
+  property: [
+    'For Sale',
+    'To Rent',
+    'To Share',
+    'To Swap',
+    'Commerial',
+    'Parking & Garage',
+    'International',
+    'Holiday Rentals',
+    'Property Wanted'
+  ],
+  jobs: [
+    'Accounting & Financial Services',
+    'Admin, Secretarial & PA',
+    'Charity & Volunteering',
+    'Childcare',
+    'Computing & IT',
+    'Construction & Property',
+    'Housekeeping & Cleaning',
+    'Marketing, Advertising & PR',
+    'Sales',
+    'Social & Care Work',
+    'Sport, Fitness & Leisure',
+    'Teaching & Education',
+    'Other Jobs'
+  ],
+  pets: ['Pets For Sale', 'Equipment & Accessories', 'Missing, Lost & Found']
+};
+
+export const conditions = ['New', 'Like new', 'Used', 'Fucking broken'];

@@ -3,13 +3,117 @@
   "model": "subcategories.subcategory",
   "pk": 1,
   "fields": {
+    "name": "Furniture",
+    "categories": 1
+  }
+}, 
+{
+  "model": "subcategories.subcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Home Decor",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Garden & Patio",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 4,
+  "fields": {
+    "name": "DIY tools",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 5,
+  "fields": {
+    "name": "Lighting",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 6,
+  "fields": {
+    "name": "Cook, Dine & Bar",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 7,
+  "fields": {
+    "name": "Home Office",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 8,
+  "fields": {
+    "name": "Living Room",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 9,
+  "fields": {
+    "name": "Bathroom",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 10,
+  "fields": {
+    "name": "Bedding",
+    "categories": 1
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 11,
+  "fields": {
+    "name": "Appliances",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 12,
+  "fields": {
     "name": "Mobile Phones & Communications",
     "categories": 2
   }
 },
 {
   "model": "subcategories.subcategory",
-  "pk": 2,
+  "pk": 13,
+  "fields": {
+    "name": "Computing, Tablets & Networking",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 14,
+  "fields": {
+    "name": "Sound & Vision",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 15,
   "fields": {
     "name": "Video Games & Consoles",
     "categories": 2
@@ -17,7 +121,7 @@
 },
 {
   "model": "subcategories.subcategory",
-  "pk": 3,
+  "pk": 16,
   "fields": {
     "name": "Cameras & Photography",
     "categories": 2
@@ -25,18 +129,762 @@
 },
 {
   "model": "subcategories.subcategory",
-  "pk": 4,
+  "pk": 17,
   "fields": {
-    "name": "Cars",
+    "name": "Televisions",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 18,
+  "fields": {
+    "name": "Smartwatches",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 19,
+  "fields": {
+    "name": "GPS & In-car Technology",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 20,
+  "fields": {
+    "name": "Smart Home & Surveillance",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 21,
+  "fields": {
+    "name": "Heating, Cooling & Air",
+    "categories": 2
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 22,
+  "fields": {
+    "name": "Men's Clothing",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 23,
+  "fields": {
+    "name": "Women's Clothing",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 24,
+  "fields": {
+    "name": "Kids' Clothing",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 25,
+  "fields": {
+    "name": "Baby Clothing & Accessories",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 26,
+  "fields": {
+    "name": "Shoes",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 27,
+  "fields": {
+    "name": "Jewellery & Watches",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 28,
+  "fields": {
+    "name": "Bags & Accessories",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 29,
+  "fields": {
+    "name": "Fancy Dress & Costumes",
+    "categories": 3
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 30,
+  "fields": {
+    "name": "Sporting Goods",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 31,
+  "fields": {
+    "name": "Fitness, Running & Yoga",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 32,
+  "fields": {
+    "name": "Cycling & Scooters",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 33,
+  "fields": {
+    "name": "Football",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 34,
+  "fields": {
+    "name": "Golf",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 35,
+  "fields": {
+    "name": "Skiing & Snowboarding",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 36,
+  "fields": {
+    "name": "Water Sports",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 37,
+  "fields": {
+    "name": "Camping & Hiking",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 38,
+  "fields": {
+    "name": "Musical Instruments",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 39,
+  "fields": {
+    "name": "Arts & Craft",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 40,
+  "fields": {
+    "name": "Other Sports",
+    "categories": 4
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 41,
+  "fields": {
+    "name": "Health Care",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 42,
+  "fields": {
+    "name": "Vitamins & Dietary Supplements",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 43,
+  "fields": {
+    "name": "Oral Care",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 44,
+  "fields": {
+    "name": "Natural & Alternative Remedies",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 45,
+  "fields": {
+    "name": "Vision Care",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 46,
+  "fields": {
+    "name": "Sports Supplements",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 47,
+  "fields": {
+    "name": "Hair Care & Styling",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 48,
+  "fields": {
+    "name": "Make-Up",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 49,
+  "fields": {
+    "name": "Nail Care, Manicure & Pedicure",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 50,
+  "fields": {
+    "name": "Fragrances",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 51,
+  "fields": {
+    "name": "Facial Skin Care",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 52,
+  "fields": {
+    "name": "Shaving & Hair Removal",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 53,
+  "fields": {
+    "name": "Bath & Body",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 54,
+  "fields": {
+    "name": "Sun Care & Tanning",
+    "categories": 5
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 55,
+  "fields": {
+    "name": "Action Figures",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 56,
+  "fields": {
+    "name": "Construction & Building Toys",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 57,
+  "fields": {
+    "name": "Preschool & Pretend Play",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 58,
+  "fields": {
+    "name": "Educational Toys",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 59,
+  "fields": {
+    "name": "Creative Toys & Activities",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 60,
+  "fields": {
+    "name": "Outdoor Toys & Activities",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 61,
+  "fields": {
+    "name": "Board Games",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 62,
+  "fields": {
+    "name": "Toy Model Kits",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 63,
+  "fields": {
+    "name": "Wargames & Role-playing Games",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 64,
+  "fields": {
+    "name": "TV & Movie Character Toys",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 65,
+  "fields": {
+    "name": "Remote-Controlled Toys",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 66,
+  "fields": {
+    "name": "Diecast Vehicles, Parts & Accessories",
+    "categories": 6
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 67,
+  "fields": {
+    "name": "Cars & Vans",
     "categories": 7
   }
 },
 {
   "model": "subcategories.subcategory",
-  "pk": 5,
+  "pk": 68,
   "fields": {
-    "name": "Sporting Goods",
-    "categories": 4
+    "name": "Motorbikes & Scooters",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 69,
+  "fields": {
+    "name": "Caravans & Motorhomes",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 70,
+  "fields": {
+    "name": "Other Vehicles",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 71,
+  "fields": {
+    "name": "Car Parts & Accessories",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 72,
+  "fields": {
+    "name": "Motorcycle Parts & Accessories",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 73,
+  "fields": {
+    "name": "Caravan, Campervan & Motorhome Parts",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 74,
+  "fields": {
+    "name": "Garage Equipment & Tools",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 75,
+  "fields": {
+    "name": "Oils, Fluids & Lubricants",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 76,
+  "fields": {
+    "name": "Vehicle Clothing, Protection & Merchandise",
+    "categories": 7
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 77,
+  "fields": {
+    "name": "Trading Cards",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 78,
+  "fields": {
+    "name": "Antiques",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 79,
+  "fields": {
+    "name": "Pottery, Porcelain & Glass",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 80,
+  "fields": {
+    "name": "Art",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 81,
+  "fields": {
+    "name": "Dolls & Bears",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 82,
+  "fields": {
+    "name": "Sports Memorabilia",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 83,
+  "fields": {
+    "name": "Trains & Railway Models",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 84,
+  "fields": {
+    "name": "Coins",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 85,
+  "fields": {
+    "name": "Stamps",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 86,
+  "fields": {
+    "name": "Other Collectibles",
+    "categories": 8
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 87,
+  "fields": {
+    "name": "For Sale",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 88,
+  "fields": {
+    "name": "To Rent",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 89,
+  "fields": {
+    "name": "To Share",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 90,
+  "fields": {
+    "name": "To Swap",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 91,
+  "fields": {
+    "name": "Commercial",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 92,
+  "fields": {
+    "name": "Parking & Garage",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 93,
+  "fields": {
+    "name": "International",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 94,
+  "fields": {
+    "name": "Holiday Rentals",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 95,
+  "fields": {
+    "name": "Property Wanted",
+    "categories": 9
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 96,
+  "fields": {
+    "name": "Accounting & Financial Services",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 97,
+  "fields": {
+    "name": "Admin, Secretarial & PA",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 98,
+  "fields": {
+    "name": "Charity & Volunteering",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 99,
+  "fields": {
+    "name": "Childcare",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 100,
+  "fields": {
+    "name": "Computing & IT",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 101,
+  "fields": {
+    "name": "Construction & Property",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 102,
+  "fields": {
+    "name": "Housekeeping & Cleaning",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 103,
+  "fields": {
+    "name": "Marketing, Advertising & PR",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 104,
+  "fields": {
+    "name": "Sales",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 105,
+  "fields": {
+    "name": "Social & Care Work",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 106,
+  "fields": {
+    "name": "Sport, Fitness & Leisure",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 107,
+  "fields": {
+    "name": "Teaching & Education",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 108,
+  "fields": {
+    "name": "Other Jobs",
+    "categories": 10
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 109,
+  "fields": {
+    "name": "Pets For Sale",
+    "categories": 11
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 110,
+  "fields": {
+    "name": "Equipment & Accessories",
+    "categories": 11
+  }
+},
+{
+  "model": "subcategories.subcategory",
+  "pk": 111,
+  "fields": {
+    "name": "Missing, Lost & Found",
+    "categories": 11
   }
 }
 ]
