@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {useNavigate} from 'react-router-dom';
+import * as React from 'react'
+import {useNavigate, Link} from 'react-router-dom'
 // MUI
 import {
   Typography,
@@ -7,10 +7,12 @@ import {
   Toolbar,
   AppBar,
   Badge,
-  Box
+  Box,
+  Tooltip
 } from '@mui/material';
 
 import {Menu, AddCircle, Bookmark, AccountCircle} from '@mui/icons-material';
+import { isAuthenticated } from '../../utils/auth';
 
 // Components
 import MobileMenu from './MobileMenu';
@@ -71,44 +73,50 @@ const NavBar = () => {
       />
 
       <Box sx={{pl: 10, display: {xs: 'none', md: 'flex'}}}>
-        <IconButton
-          size='medium'
-          aria-label='show 4 new mails'
-          color='inherit'
-          sx={{
-            mr: 0.75
-          }}
-        >
-          {/* <Badge badgeContent={4} color='error'> */}
-          <AddCircle />
-          {/* </Badge> */}
-        </IconButton>
-        <IconButton
-          size='small'
-          aria-label='show 17 new notifications'
-          color='inherit'
-          sx={{
-            m: 0.75
-          }}
-        >
-          {/* <Badge badgeContent={17} color='error'> */}
-          <Bookmark />
-          {/* </Badge> */}
-        </IconButton>
-        <IconButton
-          size='medium'
-          edge='end'
-          aria-label='account of current user'
-          aria-controls={menuId}
-          aria-haspopup='true'
-          // onClick={}
-          color='inherit'
-          sx={{
-            ml: 0.75
-          }}
-        >
-          <AccountCircle />
-        </IconButton>
+        <Tooltip title='Sell'>
+          <IconButton
+            size='medium'
+            aria-label='show 4 new mails'
+            color='inherit'
+            sx={{
+              mr: 0.75
+            }}
+          >
+            {/* <Badge badgeContent={4} color='error'> */}
+            <AddCircle onClick={!isAuthenticated() ? () => navigate('/login') : () => navigate('/sell')} />
+            {/* </Badge> */}
+          </IconButton>
+        </Tooltip>  
+        <Tooltip title='Saved'>
+          <IconButton
+            size='small'
+            aria-label='show 17 new notifications'
+            color='inherit'
+            sx={{
+              m: 0.75
+            }}
+          >
+            {/* <Badge badgeContent={17} color='error'> */}
+            <Bookmark />
+            {/* </Badge> */}
+          </IconButton>
+        </Tooltip>
+        <Tooltip title={isAuthenticated() ? 'My Profile' : 'Log in' }>
+          <IconButton
+            size='medium'
+            edge='end'
+            aria-label='account of current user'
+            aria-controls={menuId}
+            aria-haspopup='true'
+            // onClick={}
+            color='inherit'
+            sx={{
+              ml: 0.75
+            }}
+          >
+            <AccountCircle onClick={isAuthenticated() ? () => navigate('/myprofile') : () => navigate('/login')} />
+          </IconButton>
+        </Tooltip>    
       </Box>
       <Box sx={{pl: 10, display: {xs: 'flex', md: 'none'}}}>
         <IconButton

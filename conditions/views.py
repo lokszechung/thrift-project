@@ -13,5 +13,4 @@ class ConditionListView(APIView):
     def get(self, _request):
         conditions = Condition.objects.all()
         serialized_conditions = PopulatedConditionSerializer(conditions, many=True)
-        print(serialized_conditions.data)
         return Response(serialized_conditions.data)

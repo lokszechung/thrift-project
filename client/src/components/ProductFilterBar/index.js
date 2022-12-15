@@ -1,9 +1,9 @@
-import React from 'react';
-import './styles.scss';
-import {subcategories, conditions} from './subcategories';
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
-import Button from '../../components/Button';
+import React from 'react'
+import './styles.scss'
+import {subcategories, conditions} from './subcategories'
+import Stack from '@mui/material/Stack'
+import Slider from '@mui/material/Slider'
+import Button from '../../components/Button'
 
 const ProductFilterBar = ({
   route,
@@ -55,16 +55,16 @@ const ProductFilterBar = ({
     );
   };
 
-  let containerClassName = 'filter-bar-container';
+  let containerClassName = 'filter-bar-container'
 
   if (!showFilterModal) {
-    containerClassName += ' closed';
+    containerClassName += ' closed'
   }
   // if (isSticky) {
-  //   containerClassName += ' sticky';
+  //   containerClassName += ' sticky'
   // }
   if (isModal) {
-    containerClassName += ' modal-view';
+    containerClassName += ' modal-view'
   }
 
   return (
@@ -92,7 +92,7 @@ const ProductFilterBar = ({
         <Button onClick={applyFilters} type='primary' text='Apply' />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductFilterBar;
+export default ProductFilterBar

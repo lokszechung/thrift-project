@@ -38,6 +38,7 @@ export const isAuthenticated = () => {
 export const handleLogout = (navigate) => {
   // Remove the token from localStorage
   localStorage.removeItem(tokenName)
+  console.log('logout')
   // Navigate to the login page
   navigate('/login')
 }

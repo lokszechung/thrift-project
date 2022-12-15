@@ -13,5 +13,4 @@ class SubcategoryListView(APIView):
     def get(self, _request):
         subcategories = Subcategory.objects.all()
         serialized_subcategories = PopulatedSubcategorySerializer(subcategories, many=True)
-        print(serialized_subcategories.data)
         return Response(serialized_subcategories.data)

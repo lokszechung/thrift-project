@@ -15,6 +15,8 @@ from django.conf import settings
 from rest_framework.exceptions import NotFound
 from .serializers.populated import PopulatedUserSerializer
 
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 User = get_user_model()
 # Create your views here.
 
@@ -39,7 +41,6 @@ class LoginView(APIView):
         try:
             user_to_login = User.objects.get(email=email)
         except User.DoesNotExist as e:
-            print(e)  
             raise PermissionDenied('Invalid credentials')
         
         if not user_to_login.check_password(password):  
@@ -76,6 +77,23 @@ class UserDetailView(APIView):
     def get(self, _request, pk):
         user = User.objects.get(pk=pk)
         try:
+            populated_serialized_user = PopulatedUserSerializer(user)
+            return Response(populated_serialized_user.data)
+        except User.DoesNotExist as e:
+            raise NotFound(str(e))
+        except Exception as e:
+            return Response(str(e), status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+class UserProfileView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+    
+    def get(self, request):
+        try:
+            headers = request.headers.get('Authorization')
+            token = headers.replace('Bearer ', '')
+            payload = jwt.decode(token, settings.SECRET_KEY, 'HS256')
+            print('payload sub -> ', payload['sub'])
+            user = User.objects.get(pk=payload['sub'])
             populated_serialized_user = PopulatedUserSerializer(user)
             return Response(populated_serialized_user.data)
         except User.DoesNotExist as e:

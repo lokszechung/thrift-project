@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
 import {Box} from '@mui/material'
 import Button from '../../components/Button'
 import './styles.scss';
@@ -8,7 +7,13 @@ import FeaturedItem from '../../components/FeaturedItem'
 import axios from 'axios'
 import moment from 'moment'
 
+import { getToken, handleLogout } from '../../utils/auth'
+import { useNavigate } from 'react-router-dom';
+
 const UserView = () => {
+
+  const navigate = useNavigate()
+
   const [showFilterModal, setShowFilterModal] = useState(false)
 
   const containerPadding = {
@@ -23,12 +28,15 @@ const UserView = () => {
   }
 
   const [user, setUser] = useState([])
-  const { userId } = useParams()
 
   useEffect(() => {
     const getUser = async () => {
       try {
-        const { data } = await axios.get(`/api/auth/profile/${userId}`)
+        const { data } = await axios.get('/api/auth/myprofile/',{
+          headers: {
+            Authorization: `Bearer ${getToken()}`,
+          },
+        })
         setUser(data)
       } catch (err) {
         console.log(err)
@@ -58,7 +66,13 @@ const UserView = () => {
           alt='profile-img'
         />
         <div className='seller-info-text'>
-          <h4>{user.first_name} {user.last_name}</h4>
+          <div className='log-out-container'>
+            <h4>{user.first_name} {user.last_name}</h4>
+            <Button
+              onClick={() => handleLogout(navigate)}
+              text='Log out'
+            />
+          </div>
           <p>
             <b>Email:</b> {user.email}
           </p>

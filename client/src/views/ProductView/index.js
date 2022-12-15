@@ -135,7 +135,7 @@ const ProductView = () => {
         <div className='info-text'>
           <h5>{listing ? listing.title : null}</h5>
           <h6>£{listing ? (listing.price % 1 === 0 ? listing.price.split('.')[0] : listing.price) : null}</h6>
-          <span>Added {listing ? moment(listing.created_at).startOf('hour').fromNow() : null}</span>
+          <span>Added {listing ? moment(listing.created_at).startOf('second').fromNow() : null}</span>
           <p className='description'>
           {listing ? listing.description : null}
           </p>

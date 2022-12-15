@@ -62,7 +62,7 @@ const LoginView = () => {
         />
         </div>
         {error && <small>{error}</small>}
-        <Button onClick={handleSubmit} text='Register' type='primary' />
+        <Button onClick={handleSubmit} text='Login' type='primary' />
       </form>
       <span>Don't have an account?</span>
       <Link to={'/register'}>Create an account</Link>

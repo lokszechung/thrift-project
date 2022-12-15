@@ -1,0 +1,25 @@
+.product-form-container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .formfields{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 15px auto;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdown{
+    width: 300px;
+  }
+}

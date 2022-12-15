@@ -7,6 +7,8 @@ import ProductView from './views/ProductView'
 import UserView from './views/UserView'
 import RegisterView from './views/RegisterView'
 import LoginView from './views/LoginView'
+import SellView from './views/SellView'
+import ProfileView from './views/ProfileView'
 
 export const categoryRoutes = [
   'Home & Garden',
@@ -35,7 +37,9 @@ export const routes = (
     <Route exact path='/listings/:category/:productId' element={<ProductView />} />
     <Route exact path='/:productId' element={<ProductView />} />
     <Route exact path='/chilli/:userId' element={<UserView />} />
+    <Route exact path='/myprofile' element={<ProfileView />} /> 
     <Route exact path='/register' element={<RegisterView />} />
     <Route exact path='/login' element={<LoginView />} />
+    <Route exact path='/sell' element={<SellView />} />
   </Routes>
 )

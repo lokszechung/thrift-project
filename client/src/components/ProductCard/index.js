@@ -21,7 +21,7 @@ const ProductCard = ({onCardClick, image, title, price, description, createdAt})
       </span>
 
       <div className='card-actions'>
-        <span>Listed {moment(createdAt).startOf('hour').fromNow()}</span>
+        <span>Listed {moment(createdAt).startOf('second').fromNow()}</span>
         <Button onClick={onCardClick} text='View Listing' />
       </div>
     </div>
