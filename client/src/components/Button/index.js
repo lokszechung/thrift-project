@@ -1,5 +1,5 @@
-import React from 'react';
-import './styles.scss';
+import React from 'react'
+import './styles.scss'
 
 const Button = ({
   text,
@@ -16,7 +16,7 @@ const Button = ({
     >
       <p>{text}</p>
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

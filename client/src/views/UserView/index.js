@@ -6,6 +6,7 @@ import './styles.scss';
 import ProductFilterBar from '../../components/ProductFilterBar'
 import FeaturedItem from '../../components/FeaturedItem'
 import axios from 'axios'
+import moment from 'moment'
 
 const UserView = () => {
   const [showFilterModal, setShowFilterModal] = useState(false)
@@ -21,22 +22,24 @@ const UserView = () => {
     setShowFilterModal(false)
   }
 
-  // const [user, setUser] = useState([])
-  // const { userId } = useParams()
+  const [user, setUser] = useState([])
+  const { userId } = useParams()
 
-  // useEffect(() => {
-  //   const getUser = async () => {
-  //     try {
-  //       const { data } = await axios.get(`api/auth/profile/${userId}`)
-  //       setUser(data)
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   }
-  //   getUser()
-  // },[])
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const { data } = await axios.get(`/api/auth/profile/${userId}`)
+        setUser(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getUser()
+  },[])
 
-  // console.log(user)
+  console.log(user)
+  console.log(user.listings)
+  console.log(user.date_joined)
 
   const arrFake = [...Array(14).keys()]
 
@@ -51,21 +54,21 @@ const UserView = () => {
     >
       <div className='seller-header-info'>
         <img
-          src='https://images.unsplash.com/photo-1608176906358-808c28865e2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80'
+          src={user.profile_image ? user.profile_image : '../../resources/img/empty_image.jpeg'}
           alt='profile-img'
         />
         <div className='seller-info-text'>
-          <h4>Lok Sze Chung</h4>
+          <h4>{user.first_name} {user.last_name}</h4>
           <p>
-            <b>Email:</b> kennkenns@hotmail.com
+            <b>Email:</b> {user.email}
           </p>
           <p>
-            <b>Tel:</b> +44 77192 77992
+            <b>Tel:</b> {user.telephone}
           </p>
           <p>
-            <b>Address:</b> Address here please @ London
+            <b>Posting since:</b> {user ? moment(user.date_joined).startOf('day').fromNow() : null}
           </p>
-          <Button text='Edit Profile' />
+          {/* <Button text='Edit Profile' /> */}
         </div>
       </div>
       <div className='seller-listings'>
@@ -79,9 +82,9 @@ const UserView = () => {
         </div>
 
         <div className='cards-grid'>
-          {arrFake.map((i) => (
-            <FeaturedItem />
-          ))}
+          {/* {user ? user.listings.map((item) => (
+            <FeaturedItem key={item.id} image={item.image} price={item.price} title={item.title} owner={item.owner} id={item.id} />
+          )) : null} */}
         </div>
       </div>
       <ProductFilterBar
@@ -105,7 +108,7 @@ const UserView = () => {
         applyFilters={applyFilters}
       />
     </Box>
-  );
-};
+  )
+}
 
-export default UserView;
+export default UserView

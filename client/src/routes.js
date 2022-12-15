@@ -1,10 +1,12 @@
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom'
 
 // Views
-import HomeView from './views/HomeView';
-import CategoryView from './views/CategoryView';
-import ProductView from './views/ProductView';
-import UserView from './views/UserView';
+import HomeView from './views/HomeView'
+import CategoryView from './views/CategoryView'
+import ProductView from './views/ProductView'
+import UserView from './views/UserView'
+import RegisterView from './views/RegisterView'
+import LoginView from './views/LoginView'
 
 export const categoryRoutes = [
   'Home & Garden',
@@ -18,7 +20,7 @@ export const categoryRoutes = [
   'Property',
   'Jobs',
   'Pets'
-];
+]
 
 export const routes = (
   <Routes>
@@ -31,7 +33,9 @@ export const routes = (
       />
     ))}
     <Route exact path='/listings/:category/:productId' element={<ProductView />} />
-    <Route path='/:productId' element={<ProductView />} />
-    <Route path='/user/:userId' element={<UserView />} />
+    <Route exact path='/:productId' element={<ProductView />} />
+    <Route exact path='/chilli/:userId' element={<UserView />} />
+    <Route exact path='/register' element={<RegisterView />} />
+    <Route exact path='/login' element={<LoginView />} />
   </Routes>
-);
+)

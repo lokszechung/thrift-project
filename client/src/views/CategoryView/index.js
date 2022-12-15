@@ -21,19 +21,19 @@ const CategoryView = ({bannerText}) => {
   const [categorisedListings, setCategorisedListings] = useState([])
   const [category, setCategory] = useState([])
 
-  const categoryIndex = {
-    'Home & Garden': 1,
-    'Electronics': 2,
-    'Fashion': 3,
-    'Sports & Leisure': 4,
-    'Health & Beauty': 5,
-    'Toys': 6, 
-    'Motors': 7, 
-    'Collectibles': 8, 
-    'Property': 9, 
-    'Jobs': 10,
-    'Pets': 11
-  }
+  // const categoryIndex = {
+  //   'Home & Garden': 1,
+  //   'Electronics': 2,
+  //   'Fashion': 3,
+  //   'Sports & Leisure': 4,
+  //   'Health & Beauty': 5,
+  //   'Toys': 6, 
+  //   'Motors': 7, 
+  //   'Collectibles': 8, 
+  //   'Property': 9, 
+  //   'Jobs': 10,
+  //   'Pets': 11
+  // }
 
   useEffect(() => {
     const getListings = async () => {
@@ -61,6 +61,7 @@ const CategoryView = ({bannerText}) => {
     console.log(listingArray)
     setCategorisedListings(listingArray)
   }, [bannerText, listings, category])
+
   const isMobileScreen = useWindowDimensions().width <= 900;
   // const isStickySidebar = useOnScreen(bannerRef);
 
@@ -149,7 +150,7 @@ const CategoryView = ({bannerText}) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CategoryView;
+export default CategoryView

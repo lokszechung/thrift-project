@@ -1,0 +1,40 @@
+.login-form-container{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .formfields{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 15px auto;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button{
+    width: 150px;
+    text-align: center;
+  }
+
+  small{
+    color: red;
+  }
+
+  span{
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  a{
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}

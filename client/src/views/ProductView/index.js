@@ -9,6 +9,7 @@ import {Box} from '@mui/material'
 // import ReactMapGL from 'react-map-gl'
 import axios from 'axios'
 // import {useNavigate} from 'react-router-dom'
+import moment from 'moment'
 
 
 const ProductView = () => {
@@ -25,7 +26,7 @@ const ProductView = () => {
   useEffect(() => {
     const getSingleListing = async () => {
       try {
-        const { data } = await axios.get(`api/listings/${productId}`)
+        const { data } = await axios.get(`/api/listings/${productId}`)
         setListing(data)
       } catch (err) {
         console.log(err)
@@ -39,7 +40,7 @@ const ProductView = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const { data } = await axios.get('api/auth/users')
+        const { data } = await axios.get('/api/auth/users')
         setUsers(data)
       } catch (err) {
         console.log(err)
@@ -134,12 +135,13 @@ const ProductView = () => {
         <div className='info-text'>
           <h5>{listing ? listing.title : null}</h5>
           <h6>£{listing ? (listing.price % 1 === 0 ? listing.price.split('.')[0] : listing.price) : null}</h6>
-          <span>Added {listing ? listing.created_at.split('T')[0] : null}</span>
+          <span>Added {listing ? moment(listing.created_at).startOf('hour').fromNow() : null}</span>
           <p className='description'>
           {listing ? listing.description : null}
           </p>
           <span>
-            Posted by <Link to={`/user/${listing && users ? itemOwner.id : null}`}>{listing && users ? itemOwner.first_name : null} {listing && users ? itemOwner.last_name : null}</Link>
+            {/* Posted by <Link to={`/user/${listing && users ? itemOwner.id : null}`}>{listing && users ? itemOwner.first_name : null} {listing && users ? itemOwner.last_name : null}</Link> */}
+            Posted by <Link to={`/chilli/${listing && users ? itemOwner.id : null}`}>{listing && users ? itemOwner.first_name : null} {listing && users ? itemOwner.last_name : null}</Link>
           </span>
           {/* onClick={() => handleUserDirect(itemOwner)} */}
           <Button text={`Contact ${listing && users ? itemOwner.first_name : null}`} type='primary' />
