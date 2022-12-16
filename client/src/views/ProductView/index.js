@@ -32,7 +32,7 @@ const ProductView = () => {
   useEffect(() => {
     const getSingleListing = async () => {
       try {
-        const { data } = await axios.get(`/api/listings/${productId}`)
+        const { data } = await axios.get(`/api/listings/${productId}/`)
         setListing(data)
       } catch (err) {
         console.log(err)
@@ -46,7 +46,7 @@ const ProductView = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const { data } = await axios.get('/api/auth/users')
+        const { data } = await axios.get('/api/auth/users/')
         setUsers(data)
       } catch (err) {
         console.log(err)

@@ -37,7 +37,7 @@ const CategoryView = ({bannerText}) => {
   useEffect(() => {
     const getListings = async () => {
       try {
-        const { data } = await axios.get('/api/categories')
+        const { data } = await axios.get('/api/categories/')
         setListings(data)
       } catch (err) {
         console.log(err)

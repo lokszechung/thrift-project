@@ -19,7 +19,7 @@ const HomeView = () => {
   useEffect(() => {
     const getListings = async () => {
       try {
-        const { data } = await axios.get('/api/listings')
+        const { data } = await axios.get('/api/listings/')
         setListings(data)
       } catch (err) {
         console.log(err)
