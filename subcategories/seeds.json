@@ -6,7 +6,7 @@
     "name": "Furniture",
     "categories": 1
   }
-}, 
+},
 {
   "model": "subcategories.subcategory",
   "pk": 2,

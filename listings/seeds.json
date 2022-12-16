@@ -9,7 +9,9 @@
     "location": "London",
     "created_at": "2022-12-08T11:29:39.450Z",
     "condition": 5,
-    "subcategory": 1,
+    "subcategory": 12,
+    "image": "https://i.ebayimg.com/images/g/npUAAOSwJEZhNMOa/s-l500.jpg",
+    "owner": 1,
     "featured": false,
     "sold": false
   }
@@ -24,7 +26,9 @@
     "location": "London",
     "created_at": "2022-12-08T11:42:27.500Z",
     "condition": 6,
-    "subcategory": 5,
+    "subcategory": 30,
+    "image": "https://img.ltwebstatic.com/images3_pi/2022/04/27/165103763146b6c98ecf7d588aa150cfff370d23c6_thumbnail_600x.webp",
+    "owner": 1,
     "featured": false,
     "sold": false
   }
@@ -39,7 +43,9 @@
     "location": "London",
     "created_at": "2022-12-08T14:47:17.858Z",
     "condition": 4,
-    "subcategory": 4,
+    "subcategory": 67,
+    "image": "https://aacarsdna.com/images/vehicles/37/large/4bd9615c3047b649e2943edf6295370f.jpg",
+    "owner": 1,
     "featured": false,
     "sold": false
   }
@@ -54,7 +60,366 @@
     "location": "London",
     "created_at": "2022-12-08T19:20:47.357Z",
     "condition": 1,
-    "subcategory": 2,
+    "subcategory": 15,
+    "image": "https://i.ebayimg.com/images/g/q24AAOSwh91iaHX5/s-l500.jpg",
+    "owner": 1,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 7,
+  "fields": {
+    "title": "apple airpods 2nd gen",
+    "description": "Excellent condition, no ear wax, charger not iunclded. £100 ono",
+    "price": "100.00",
+    "location": "London",
+    "created_at": "2022-12-09T16:02:15.999Z",
+    "condition": 2,
+    "subcategory": 14,
+    "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MV7N2?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1551489688005",
+    "owner": 2,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 8,
+  "fields": {
+    "title": "breakfast bar chairs",
+    "description": "Four brown leather/chrome swivel breakfast bar chairs with adjustable height\r\n(sold as a set)",
+    "price": "200.00",
+    "location": "London",
+    "created_at": "2022-12-11T12:01:08.091Z",
+    "condition": 4,
+    "subcategory": 1,
+    "image": "https://i.ebayimg.com/images/g/qJYAAOSw66tjlcVN/s-l800.webp",
+    "owner": 2,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 9,
+  "fields": {
+    "title": "Lambretta Parka Large",
+    "description": "Good condition lambretta parka. Only worn a handful of times. Size large. I’m 6’ 2 medium build and it fits well. Great for the mod look. Christmas present forces reluctant sale. £25 ono",
+    "price": "25.00",
+    "location": "London",
+    "created_at": "2022-12-11T12:04:17.759Z",
+    "condition": 4,
+    "subcategory": 22,
+    "image": "https://i.ebayimg.com/images/g/7fwAAOSwHdtjlcVc/s-l800.webp",
+    "owner": 1,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 10,
+  "fields": {
+    "title": "nike football",
+    "description": "Nike football never used, bought back in 2015",
+    "price": "5.00",
+    "location": "London",
+    "created_at": "2022-12-13T16:23:06.101Z",
+    "condition": 1,
+    "subcategory": 33,
+    "image": "http://football-balls.com/ball_files/2014-2015-english-premier-league-nike-ordem-2-official-match-ball.png",
+    "owner": 2,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 11,
+  "fields": {
+    "title": "Laptop Case Macbook 15 inch",
+    "description": "Grey Laptop case will fit Macbook air 15inch",
+    "price": "15.00",
+    "location": "London",
+    "created_at": "2022-12-13T16:25:10.554Z",
+    "condition": 1,
+    "subcategory": 13,
+    "image": "https://m.media-amazon.com/images/I/91DI2RXDO9L._AC_SX679_.jpg",
+    "owner": 1,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 12,
+  "fields": {
+    "title": "Apple lightning cable",
+    "description": "Apple lightning cable 1m",
+    "price": "5.00",
+    "location": "London",
+    "created_at": "2022-12-13T16:26:34.265Z",
+    "condition": 2,
+    "subcategory": 12,
+    "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MD818?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1600799997000",
+    "owner": 2,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 13,
+  "fields": {
+    "title": "Apple lightning cable USB C",
+    "description": "Apple lightning cable USB C 1 metre long",
+    "price": "12.50",
+    "location": "London",
+    "created_at": "2022-12-13T16:27:41.794Z",
+    "condition": 2,
+    "subcategory": 13,
+    "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MM0A3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1632956386000",
+    "owner": 2,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 14,
+  "fields": {
+    "title": "Amazing value Lego bundle",
+    "description": "Huge Lego bundle for sale. Some old and discontinued ones here. The Batman and ninjago ones come with lego figures. Star Wars ones do not. Great value here. Collection is from Chatham. £170 for everything shown.",
+    "price": "170.00",
+    "location": "Chatham",
+    "created_at": "2022-12-14T18:59:31.495Z",
+    "condition": 5,
+    "subcategory": 56,
+    "image": "https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/wrYAAOSw97FjmbiK/$_86.JPG",
+    "owner": 3,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 15,
+  "fields": {
+    "title": "Macbook Air M1",
+    "description": "Selling my 13” Macbook Air. Still in great working/visual condition with 94% battery health. Comes with 8GB Ram and 256GB SSD Storage.",
+    "price": "450.00",
+    "location": "London",
+    "created_at": "2022-12-14T19:01:06.582Z",
+    "condition": 3,
+    "subcategory": 13,
+    "image": "https://i.ebayimg.com/00/s/ODY3WDEwMjQ=/z/T-YAAOSwXJFjmhg~/$_86.JPG",
+    "owner": 3,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 16,
+  "fields": {
+    "title": "Nike Air Jordan 1 Retro High UK 7.5 Dark Mocha Sail Black White Brown",
+    "description": "Nike Air Jordan 1 Retro High UK 7.5 Dark Mocha Sail Black White Brown\r\n\r\nBRAND NEW!!!",
+    "price": "225.00",
+    "location": "London",
+    "created_at": "2022-12-14T19:09:15.074Z",
+    "condition": 1,
+    "subcategory": 26,
+    "image": "https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/3j0AAOSw8ktiKMuw/$_86.JPG",
+    "owner": 3,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 17,
+  "fields": {
+    "title": "Le Creuset Toughened Non-Stick Milk Pan, 16cm",
+    "description": "A milk pan from Le Creuset's Toughened Non-Stick cookware range, with two pouring spouts, for right or left-handed use. The Toughened Non-Stick range boasts innovative technology from its three-layer reinforced non-stick surface to the induction-compatible base. The cookware is made from high-quality, hard-anodised forged aluminium for excellent heat retention and even heat distribution.",
+    "price": "105.00",
+    "location": "London",
+    "created_at": "2022-12-14T19:19:16.495Z",
+    "condition": 1,
+    "subcategory": 6,
+    "image": "https://johnlewis.scene7.com/is/image/JohnLewis/238534501alt4?$rsp-pdp-port-640-82$",
+    "owner": 2,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 18,
+  "fields": {
+    "title": "Gabriel Jesus Signed Shirt",
+    "description": "Gabriel Jesus Signed 2022/23 Arsenal Away Shirt!\r\n\r\nSignature was collected in person, there is proof of signing as well.\r\n\r\nBuyer pays a small postage fee, payment can be arranged (very flexible).\r\n\r\nOpen to negotiations/offers\r\n\r\nIdeal Christmas/New Years gift!\r\n\r\nEmail with any possible questions!",
+    "price": "110.00",
+    "location": "London",
+    "created_at": "2022-12-14T19:22:07.295Z",
+    "condition": 2,
+    "subcategory": 82,
+    "image": "https://i.ebayimg.com/00/s/MTAyNFg5Mzg=/z/kSsAAOSwpVVjmOyH/$_86.JPG",
+    "owner": 1,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 19,
+  "fields": {
+    "title": "Pokemon Cards. Holos ,1st editions and graded",
+    "description": "Selling my Pokemon card collection from when I was kid, the cards are in top loaders and look in really good condition for how long I’ve had them. I’ve had a few graded from the Pokegrade company. If there’s any questions I’ll be happy to help I’m limited to how many pictures I can have on I have no problem sending pictures through WhatsApp for a better look at the cards please just ask, thank you\r\n\r\nGraded\r\nSuicune holo grade 9 mint #14/64\r\nUmbreon non holo grade 8 #32/75\r\nSuicune non holo grade 7 #27/64\r\n\r\n1st edition non holos\r\nHoundoom #23/75\r\nUrsaring #34/75\r\nTyranitar #31/75\r\nPoliwrath #28/75\r\nPolitoad #27/75\r\nScizor #29/75\r\nKabutops #25/75\r\nEspeon #20/75\r\nAriados #27/111\r\nQuilava #47/111",
+    "price": "350.00",
+    "location": "London",
+    "created_at": "2022-12-14T19:24:31.148Z",
+    "condition": 4,
+    "subcategory": 77,
+    "image": "https://i.ebayimg.com/00/s/MTAyNFg4ODI=/z/KIwAAOSwHKlij1mP/$_86.JPG",
+    "owner": 3,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 20,
+  "fields": {
+    "title": "Bang & Olufsen Beoplay EX Earphones",
+    "description": "Used 3-4 times only. Small scratch on the box.\n\nFull set of brand new ear tips.\n\nCash on collection, available in London\n\nNo time wasters please",
+    "price": "250.00",
+    "location": "London",
+    "created_at": "2022-12-15T18:17:17.330Z",
+    "condition": 2,
+    "subcategory": 14,
+    "image": "https://res.cloudinary.com/dbyy5rpzw/image/upload/v1671128190/THRIFT_PROJECT_API/g21qqacn3ltf5prdrmzi.jpg",
+    "owner": 1,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 21,
+  "fields": {
+    "title": "Ammaco Kamikaze MTB 1",
+    "description": "Ammaco Kamikaze MTB\r\n21 gears\r\n21 inch frame\r\n26 inch wheels\r\nFull suspension\r\nAll bikes sold as seen & tested\r\nIn perfect condition fully serviced ready to ride away.\r\nAnother quality serviced bikes can be viewed in Foxhill Building, Wern Trading Estate, Rogerstone, NP10 9FQ\r\nby appointment. Check out my other bikes.\r\nSale of used bikes, serviced in perfect condition ready to ride away. At any one time there are around 50 bikes various sizes in stock. Can deliver for diesel money.",
+    "price": "60.00",
+    "location": "London",
+    "created_at": "2022-12-15T18:19:51.860Z",
+    "condition": 4,
+    "subcategory": 32,
+    "image": "https://res.cloudinary.com/dbyy5rpzw/image/upload/v1671128390/THRIFT_PROJECT_API/hrhxsohlrd1zqvvpezou.jpg",
+    "owner": 1,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 28,
+  "fields": {
+    "title": "Silent TRANSPARENT mechanical keyboard",
+    "description": "FL ESPORTS Q75 82-Key CLEAR TINTED POLYCARBONATE case and keycaps, Hot-Swap (MX ICE Mint switches), RGB, 3 mode (Type C,2.4,BT), 3000Mah internal battery. Programmable via Windows utility. RGB works in wireless modes.",
+    "price": "80.00",
+    "location": "London",
+    "created_at": "2022-12-16T06:13:24.051Z",
+    "condition": 4,
+    "subcategory": 13,
+    "image": "https://res.cloudinary.com/dbyy5rpzw/image/upload/v1671171202/THRIFT_PROJECT_API/vhutaugz2b519rm7ym6c.jpg",
+    "owner": 7,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 29,
+  "fields": {
+    "title": "Apple iPad 10th Gen. 64GB, Wi-Fi, 10.9in - Blue",
+    "description": "Apple iPad 10th Gen 64GB Wi-Fi 10.9 Blue. Brand new unopened and sealed. Comes with 1 year manufacturer's guarantee. Any questions feel free to ask.",
+    "price": "450.00",
+    "location": "London",
+    "created_at": "2022-12-16T09:44:38.688Z",
+    "condition": 1,
+    "subcategory": 13,
+    "image": "https://res.cloudinary.com/dbyy5rpzw/image/upload/v1671183876/THRIFT_PROJECT_API/lxsrnvtaiuyni9xinzpd.jpg",
+    "owner": 7,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 30,
+  "fields": {
+    "title": "Samsung Galaxy Z Flip3 128GB Green",
+    "description": "Sent back for repair and it has come back good as new, probably replaced with a new one. I had to get a replacement meanwhile and cant be bothered to change over and setup all over again hence the sale. Original box, looks new.\r\n\r\nSamsung\r\nMPN\r\nSMF711BZGAEUA, SM-F711BZGAEUA\r\nUPC\r\n8806092565067\r\nModel\r\nSamsung Galaxy Z Flip3 5G",
+    "price": "410.00",
+    "location": "London",
+    "created_at": "2022-12-16T10:11:40.692Z",
+    "condition": 2,
+    "subcategory": 12,
+    "image": "https://i.ebayimg.com/00/s/MTAyNFg3Njg=/z/NxEAAOSw~2ZjTqAb/$_86.JPG",
+    "owner": 7,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 31,
+  "fields": {
+    "title": "Amazon Fire HD 8 Kids Pro Tablet 8\"",
+    "description": "Includes a full-feature tablet designed specifically for children aged 6–12 years old, and includes 1 year of age-appropriate Amazon Kids+ content and a slim Kid-Friendly Case.\r\n\r\nFeatures: up to 13 hours of battery life (for reading, watching videos and listening to music), enhanced hexa-core processor (30% faster than previous generation), 2 GB RAM, vibrant 8-inch HD display and immersive Dolby Atmos sound, 32 GB of internal storage and up to 1 TB of expandable storage—great for downloading content.",
+    "price": "147.99",
+    "location": "London",
+    "created_at": "2022-12-16T10:16:15.485Z",
+    "condition": 1,
+    "subcategory": 13,
+    "image": "https://i.ebayimg.com/images/g/AqIAAOSwb95jih9G/s-l640.jpg",
+    "owner": 5,
+    "featured": false,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 32,
+  "fields": {
+    "title": "iPhone 11 64gb 128gb unlocked box",
+    "description": "iPhone 11 64gb 128gb unlocked box warranty\r\nAll colours\r\nCome with box\r\n\r\nUsed 64gb 250\r\nLike new 64gb £290\r\n128gb from\r\n£300",
+    "price": "249.00",
+    "location": "Bradford",
+    "created_at": "2022-12-16T10:29:34.960Z",
+    "condition": 1,
+    "subcategory": 12,
+    "image": "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/tpMAAOSwHw5jnELN/$_86.JPG",
+    "owner": 5,
+    "featured": true,
+    "sold": false
+  }
+},
+{
+  "model": "listings.listing",
+  "pk": 33,
+  "fields": {
+    "title": "Samsung Gear VR Oculus Headset",
+    "description": "Samsung Gear VR Oculus Headset.\r\nBoxed with user manual.\r\nCompatibility of phones can be checked on Samsung website.\r\nCan send via Post in UK only if buyer pays.",
+    "price": "20.00",
+    "location": "Coventry",
+    "created_at": "2022-12-16T10:33:53.870Z",
+    "condition": 4,
+    "subcategory": 14,
+    "image": "https://i.ebayimg.com/00/s/NjAwWDgwMA==/z/p5sAAOSwOaBjnEHx/$_86.PNG",
+    "owner": 5,
     "featured": false,
     "sold": false
   }
