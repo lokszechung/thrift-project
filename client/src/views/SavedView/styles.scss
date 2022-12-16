@@ -1,0 +1,25 @@
+.not-found-container{
+  .image-container{
+    height: calc(100vh);
+    background-image: url('../../../public/resources/img/watch_this_space.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -365px;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    // translate: 0 -250%;
+
+    h2{
+      font-size: 3rem;
+    }
+
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -77,16 +77,18 @@ const ProductForm = ({
             label='Title'
             variant='outlined'
             margin='dense'
+            value={formFields.title}
           />
           <TextField 
             required
             multiline
-            rows={4}
+            rows={6}
             onChange={handleChange}
             name='description'
             label='Description'
             variant='outlined'
             margin='dense'
+            value={formFields.description}
           />
           <TextField 
             required
@@ -95,6 +97,7 @@ const ProductForm = ({
             label='Location'
             variant='outlined'
             margin='dense'
+            value={formFields.location}
           />
           <FormControl
             margin='dense'
@@ -105,12 +108,13 @@ const ProductForm = ({
             <OutlinedInput
               name='price'
               startAdornment={<InputAdornment position="start">£</InputAdornment>}
-              label="price"
+              label='price'
+              value={formFields.price}
             />
           </FormControl>
           <div className='dropdown'>
             <TextField 
-              required
+              
               select
               onChange={handleChange}
               name='condition'
@@ -118,6 +122,7 @@ const ProductForm = ({
               variant='outlined'
               margin='dense'
               fullWidth
+              value={conditions[formFields.condition - 1]?.label}
             >
               {conditions.map(condition => (
                 <MenuItem key={condition.value} value={condition.value}>
@@ -128,7 +133,7 @@ const ProductForm = ({
           </div>
           <div className='dropdown'>
             <TextField 
-              required
+              
               select
               onChange={handleChange}
               name='category'
@@ -146,7 +151,7 @@ const ProductForm = ({
           </div>
           <div className='dropdown'>
             <TextField 
-              required
+              
               select
               onChange={handleChange}
               name='subcategory'

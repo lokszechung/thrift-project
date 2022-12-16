@@ -4,7 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import './styles.scss'
 import moment from 'moment'
 
-const ProductCard = ({onCardClick, image, title, price, description, createdAt}) => (
+const ProductCard = ({onCardClick, image, title, price, description, location, createdAt}) => (
   <div className='product-card-container'>
     <div className='card-image'>
       <img src={image} alt={title} />
@@ -13,8 +13,13 @@ const ProductCard = ({onCardClick, image, title, price, description, createdAt})
     <div className='card-content'>
       {/* <FavoriteIcon color='action' /> */}
 
-      <h6 className='title'>{title}</h6>
-      <p className='price'>£{price % 1 === 0 ? price.split('.')[0] : price}</p>
+      <h5 className='title'>{title}</h5>
+      
+      <div className='price-location-container'>
+        <h6 className='price'>£{price % 1 === 0 ? price.split('.')[0] : price}</h6>
+        <h6 className='location-span'>{location}</h6>
+      </div>
+    
 
       <span className='description'>
         {description}

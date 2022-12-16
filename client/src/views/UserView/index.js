@@ -23,6 +23,7 @@ const UserView = () => {
   }
 
   const [user, setUser] = useState([])
+  const [listings, setListings] = useState([])
   const { userId } = useParams()
 
   useEffect(() => {
@@ -41,7 +42,12 @@ const UserView = () => {
   console.log(user.listings)
   console.log(user.date_joined)
 
-  const arrFake = [...Array(14).keys()]
+  useEffect(() => {
+    console.log(user.listings)
+    setListings(user.listings)
+  }, [user])
+
+  // const arrFake = [...Array(14).keys()]
 
   return (
     <Box
@@ -74,20 +80,20 @@ const UserView = () => {
       <div className='seller-listings'>
         <div className='listings-header'>
           <h6>Listings</h6>
-          <Button
+          {/* <Button
             onClick={() => setShowFilterModal(true)}
             text='Filter'
             type='secondary'
-          />
+          /> */}
         </div>
 
         <div className='cards-grid'>
-          {/* {user ? user.listings.map((item) => (
+          {listings ? listings.map((item) => (
             <FeaturedItem key={item.id} image={item.image} price={item.price} title={item.title} owner={item.owner} id={item.id} />
-          )) : null} */}
+          )) : null}
         </div>
       </div>
-      <ProductFilterBar
+      {/* <ProductFilterBar
         // setSelectedSubCategory={setSelectedSubCategory}
         // selectedSubCategory={selectedSubCategory}
         sellerCategories={[
@@ -106,7 +112,7 @@ const UserView = () => {
         isModal
         showFilterModal={showFilterModal}
         applyFilters={applyFilters}
-      />
+      /> */}
     </Box>
   )
 }

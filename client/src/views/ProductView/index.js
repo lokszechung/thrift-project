@@ -5,11 +5,13 @@ import Button from '../../components/Button'
 import './styles.scss'
 // import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 // import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import {Box} from '@mui/material'
+import {Box, Modal, Typography} from '@mui/material'
 // import ReactMapGL from 'react-map-gl'
 import axios from 'axios'
-// import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import moment from 'moment'
+import { getToken, isOwner } from '../../utils/auth'
+import {conditions} from '../../components/ProductFilterBar/subcategories'
 
 
 const ProductView = () => {
@@ -17,11 +19,15 @@ const ProductView = () => {
   // const noOfImgs = 4;
   // const [currentImgIndex, setCurrentImgIndex] = useState(1)
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const { productId } = useParams()
   const [listing, setListing] = useState()
   const [users, setUsers] = useState()
+
+  const [open, setOpen] = useState(false)
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
   useEffect(() => {
     const getSingleListing = async () => {
@@ -92,6 +98,19 @@ const ProductView = () => {
     xl: 33
   };
 
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    borderRadius: '5px',
+    boxShadow: 24,
+    p: 4,
+  }
+
   return (
     <Box
       sx={{
@@ -134,7 +153,7 @@ const ProductView = () => {
 
         <div className='info-text'>
           <h5>{listing ? listing.title : null}</h5>
-          <h6>£{listing ? (listing.price % 1 === 0 ? listing.price.split('.')[0] : listing.price) : null}</h6>
+          <h6>£{listing ? (listing.price % 1 === 0 ? listing.price.split('.')[0] : listing.price) : null} • {listing ? conditions[listing.condition - 1] : null} condition</h6>
           <span>Added {listing ? moment(listing.created_at).startOf('second').fromNow() : null}</span>
           <p className='description'>
           {listing ? listing.description : null}
@@ -144,7 +163,32 @@ const ProductView = () => {
             Posted by <Link to={`/chilli/${listing && users ? itemOwner.id : null}`}>{listing && users ? itemOwner.first_name : null} {listing && users ? itemOwner.last_name : null}</Link>
           </span>
           {/* onClick={() => handleUserDirect(itemOwner)} */}
-          <Button text={`Contact ${listing && users ? itemOwner.first_name : null}`} type='primary' />
+          { listing ? 
+              (isOwner(listing.owner) ?
+                <>
+                  <Button text={`Edit or delete`} type='primary' onClick={() => navigate(`/${productId}/edit`)} />
+                </>
+                :
+                <div>
+                  <Button onClick={handleOpen} text={`Contact ${listing && users ? itemOwner.first_name : ''}`} />
+                  <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                  >
+                    <Box sx={style}>
+                        <h6>Seller: {listing && users ? `${itemOwner.first_name} ${itemOwner.last_name}` : ''}</h6>
+                        <br/>
+                        <p>Email: {listing && users ? itemOwner.email : ''}</p>
+                        <p>Telephone: {listing && users ? itemOwner.telephone : ''}</p>
+                    </Box>
+                  </Modal>
+                </div>
+                )
+              :
+              <Button text={`Contact ${listing && users ? itemOwner.first_name : ''}`} type='primary' />
+          }
         </div>
       </div>
 

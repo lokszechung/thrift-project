@@ -1,0 +1,24 @@
+.not-found-container{
+  .image-container{
+    height: calc(100vh - 137.69px);
+    background-image: url('../../../public/resources/img/not_found.jpg');
+    filter: brightness(70%) grayscale(.5);
+    translate: 0 0%;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    translate: 0 -250%;
+
+    h2{
+      font-size: 3rem;
+    }
+
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}

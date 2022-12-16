@@ -1,70 +1,79 @@
-import React from 'react'
-import './styles.scss'
-import {subcategories, conditions} from './subcategories'
-import Stack from '@mui/material/Stack'
-import Slider from '@mui/material/Slider'
-import Button from '../../components/Button'
+import React from 'react';
+import './styles.scss';
+import {subcategories, conditions} from './subcategories';
+import Stack from '@mui/material/Stack';
+import Slider from '@mui/material/Slider';
+import Button from '../../components/Button';
 
 const ProductFilterBar = ({
   route,
+  handleClear,
   sellerCategories,
-  setSelectedSubCategory,
-  selectedSubCategory,
+  onChangeFilters,
+  selectedFilters,
   showFilterModal,
   applyFilters,
   isModal
 }) => {
+  const {subcategory, price, radius} = selectedFilters;
   const subcategoriesToMapThrough = route
     ? subcategories[route]
     : sellerCategories;
 
   const listOfSubCategories = subcategoriesToMapThrough.map((category) => (
     <div
-      onClick={() => setSelectedSubCategory(category)}
-      className={`category-row ${
-        selectedSubCategory === category ? 'selected' : ''
-      }`}
+      onClick={() => onChangeFilters('subcategory', category)}
+      className={`category-row ${subcategory === category ? 'selected' : ''}`}
     >
       <p>{category}</p>
       {/* TODO: slot in number of items per category */}
-      <span>20</span>
+      {/* <span>20</span> */}
     </div>
   ));
 
   const getConditionCheckBoxes = conditions.map((condition) => (
     <div className='checkbox-row'>
-      <input type='checkbox' />
+      <input
+        type='checkbox'
+        checked={selectedFilters.condition.includes(condition)}
+        onChange={() => onChangeFilters('condition', condition)}
+      />
       <p>{condition}</p>
     </div>
   ));
 
-  const buildRangeSlider = (min, max, labels) => {
+  const buildRangeSlider = (min, max, labels, value) => {
     const [minRangeLabel, maxRangeLabel] = labels;
+    const isPriceSlider = minRangeLabel.includes('£');
     return (
       <Stack spacing={3} direction='row' sx={{mb: 1}} alignItems='center'>
         <span>{minRangeLabel}</span>
         <Slider
-          aria-label='Volume'
+          getAriaValueText={() => value}
+          valueLabelDisplay='auto'
           min={min}
           max={max}
-          // value={value}
-          // onChange={handleChange}
+          value={value}
+          onChange={(e) => {
+            const key = isPriceSlider ? 'price' : 'radius';
+            return onChangeFilters(key, e.target.value);
+          }}
         />
         <span>{maxRangeLabel}</span>
       </Stack>
     );
   };
 
-  let containerClassName = 'filter-bar-container'
+  let containerClassName = 'filter-bar-container';
 
   if (!showFilterModal) {
-    containerClassName += ' closed'
+    containerClassName += ' closed';
   }
   // if (isSticky) {
-  //   containerClassName += ' sticky'
+  //   containerClassName += ' sticky';
   // }
   if (isModal) {
-    containerClassName += ' modal-view'
+    containerClassName += ' modal-view';
   }
 
   return (
@@ -81,18 +90,18 @@ const ProductFilterBar = ({
         {getConditionCheckBoxes}
 
         <p className='secondary-filter-title'>PRICE</p>
-        {buildRangeSlider(0, 2500, ['£0', '£2500'])}
+        {buildRangeSlider(0, 2500, ['£0', '£2500'], price)}
 
-        <p className='secondary-filter-title'>RADIUS</p>
-        {buildRangeSlider(0, 2500, ['0km', '2500km'])}
+        {/* <p className='secondary-filter-title'>RADIUS</p>
+        {buildRangeSlider(0, 2500, ['0km', '2500km'], radius)} */}
       </div>
 
       <div className='action-buttons'>
-        <Button type='secondary' includeSideMargins text='Clear' />
+        <Button onClick={handleClear} type='secondary' includeSideMargins text='Clear' />
         <Button onClick={applyFilters} type='primary' text='Apply' />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductFilterBar
+export default ProductFilterBar;

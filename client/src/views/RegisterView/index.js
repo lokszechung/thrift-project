@@ -115,7 +115,7 @@ const RegisterView = () => {
         <Button onClick={handleSubmit} text='Register' type='primary' />
       </form>
       <span>Already have an account?</span>
-      <Link to={'/login'}>Log in instead</Link>
+      <Link to={'/login'}>Log in</Link>
     </Box>
   )
 }

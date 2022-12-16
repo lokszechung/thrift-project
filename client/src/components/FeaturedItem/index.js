@@ -26,7 +26,7 @@ const FeaturedItem = ( { image, price, title, owner, id } ) => {
 
   const navigate = useNavigate()
   return (
-    <div onClick={() => navigate(`/${id}`)} className='image-card-container'>
+    <div onClick={() => navigate(`/listings/${id}`)} className='image-card-container'>
       <div className='image-container'>
         <img
           src={image}
@@ -37,10 +37,10 @@ const FeaturedItem = ( { image, price, title, owner, id } ) => {
       <div className='item-text'>
         <p>
           {title}
-          <span className='seller'>
+          {/* <span className='seller'>
             Listed by
             <Link to={`/user/${owner}`}>{itemOwner ? `${itemOwner.first_name} ${itemOwner.last_name}` : null}</Link>
-          </span>
+          </span> */}
         </p>
         <span>£{price % 1 === 0 ? price.split('.')[0] : price}</span>
       </div>

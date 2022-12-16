@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, {useState, useRef, useEffect, useCallback} from 'react'
 import './styles.scss'
 import {useLocation, useNavigate} from 'react-router-dom'
 import ProductFilterBar from '../../components/ProductFilterBar'
@@ -8,32 +8,31 @@ import useWindowDimensions from '../../utils/useWindowDimensions'
 import ProductCard from '../../components/ProductCard'
 import axios from 'axios'
 
+import {subcategoriesIndexed, conditions} from '../../components/ProductFilterBar/subcategories'
+
 const CategoryView = ({bannerText}) => {
   const {pathname} = useLocation()
   const navigate = useNavigate()
 
+  const [selectedListingOrder, setSelectedListingOrder] = useState('a-z')
   const [selectedSubCategory, setSelectedSubCategory] = useState('')
   const [showFilterModal, setShowFilterModal] = useState(false)
+
+  const [selectedFilters, setSelectedFilters] = useState({
+    subcategory: '',
+    condition: [],
+    price: '',
+    radius: ''
+  })
   // const bannerRef = useRef()
 
 
   const [listings, setListings] = useState([])
+  const [rawListings, setRawListings] = useState([])
   const [categorisedListings, setCategorisedListings] = useState([])
   const [category, setCategory] = useState([])
 
-  // const categoryIndex = {
-  //   'Home & Garden': 1,
-  //   'Electronics': 2,
-  //   'Fashion': 3,
-  //   'Sports & Leisure': 4,
-  //   'Health & Beauty': 5,
-  //   'Toys': 6, 
-  //   'Motors': 7, 
-  //   'Collectibles': 8, 
-  //   'Property': 9, 
-  //   'Jobs': 10,
-  //   'Pets': 11
-  // }
+  const forceUpdate = useCallback((arr) => setCategorisedListings(arr), []);
 
   useEffect(() => {
     const getListings = async () => {
@@ -51,19 +50,13 @@ const CategoryView = ({bannerText}) => {
 
   useEffect(() => {
     setCategory(listings.find(listing => listing.name === bannerText))
-    console.log(category)
     const findCategory = category ? category.subcategories : null
-    console.log(findCategory)
     const withListings = findCategory ? findCategory.filter(subcat => subcat.listings.length > 0) : null
-    console.log(withListings)
     const listingArray = []
     if (withListings) withListings.map(subcat => subcat.listings.map(singleListing => listingArray.push(singleListing))) 
-    console.log(listingArray)
+    setRawListings(listingArray)
     setCategorisedListings(listingArray)
   }, [bannerText, listings, category])
-
-  const isMobileScreen = useWindowDimensions().width <= 900;
-  // const isStickySidebar = useOnScreen(bannerRef);
 
   const getImageUrlPath = () => {
     const baseUrl = '../../resources/img/banners'
@@ -73,30 +66,100 @@ const CategoryView = ({bannerText}) => {
 
   const formattedRouteText = bannerText.toLowerCase().replaceAll(' ', '')
 
+  const sort = (sortFn, prev) => prev.sort(sortFn)
+
+  const sortListingsByDropdownOption = (value) => {
+
+      const sortFnMap = {
+        'a-z': (a,b) => a.title.localeCompare(b.title),
+        'z-a': (a,b) => b.title.localeCompare(a.title),
+        'highest price': (a,b) => parseFloat(b.price) - parseFloat(a.price),
+        'lowest price': (a,b) => parseFloat(a.price) - parseFloat(b.price),
+        'added': (a,b) => new Date(b.created_at) - new Date(a.created_at)
+      }
+      return forceUpdate(sort(sortFnMap[value] , categorisedListings))
+  }
+    
+
   const sortByDropdown = (
     <div className='sort-dropdown'>
       <p>Sort by:</p>
-      <select>
-        <option>A-Z</option>
-        <option>Z-A</option>
-        <option>Highest Price</option>
-        <option>Lowest Price</option>
-        <option>Newly Added</option>
+      <select
+        // value={selectedListingOrder}
+        onChange={(e) => sortListingsByDropdownOption(e.target.value)
+          // setSelectedListingOrder(e.target.value)
+        }
+      >
+        <option value='a-z'>A-Z</option>
+        <option value='z-a'>Z-A</option>
+        <option value='highest price'>Highest Price</option>
+        <option value='lowest price'>Lowest Price</option>
+        <option value='added'>Newly Added</option>
       </select>
     </div>
-  );
+  )
+
+  const isMobileScreen = useWindowDimensions().width <= 900;
+  // let isMobileScreen
+  // const isStickySidebar = useOnScreen(bannerRef);
+  // sortListingsByDropdownOption()
 
   const applyFilters = () => {
+    console.log(listings)
     if (isMobileScreen) {
-      setShowFilterModal(false);
+      setShowFilterModal(false)
     }
+
+    const {price, radius, condition, subcategory} = selectedFilters
+
+    const filteredListings = rawListings.filter(listing => {
+      // console.log({listing, price, condition, subcategory})
+      const findSubcategoryIndex = subcategoriesIndexed[bannerText.toLowerCase().replaceAll(' ','')].find(category => category.value === listing.subcategory)?.label
+      console.log(findSubcategoryIndex)
+      const findConditionIndex = conditions[listing.condition - 1]
+      console.log(findConditionIndex)
+      return findSubcategoryIndex === subcategory && (condition.length === 0 || condition.includes(findConditionIndex)) && parseFloat(listing.price) <= price
+    })  
+
+    // listing.category === category
+    // condition.includes(listing.condition)
+    // listing.price <= price
+    setCategorisedListings(filteredListings)
   };
 
+  // useEffect(() => {
+  //   console.log(categorisedListings)
+  // }, [categorisedListings])
   // const arrFake = [...Array(10).keys()];
 
   const handleProductDirect = (product) => {
     console.log(product.id)
-    navigate(`/${product.id}`)
+    navigate(`/listings/${product.id}`)
+  }
+
+  const onChangeFilters = (key, value) => {
+    if (key === 'condition') {
+      const {condition} = selectedFilters;
+      const updatedSelectedConditions = condition.includes(value)
+        ? condition.filter((c) => c !== value)
+        : [...condition, value];
+      return setSelectedFilters({
+        ...selectedFilters,
+        condition: updatedSelectedConditions
+      });
+    }
+
+    return setSelectedFilters({...selectedFilters, [key]: value});
+  };
+
+  const handleClear = () => {
+    setSelectedFilters({
+      subcategory: '',
+      condition: [],
+      price: '',
+      radius: ''
+    })
+    setCategorisedListings(rawListings)
   }
 
   return (
@@ -111,6 +174,9 @@ const CategoryView = ({bannerText}) => {
 
       <div className='product-content'>
         <ProductFilterBar
+          handleClear={handleClear}
+          onChangeFilters={onChangeFilters}
+          selectedFilters={selectedFilters}
           setSelectedSubCategory={setSelectedSubCategory}
           selectedSubCategory={selectedSubCategory}
           route={formattedRouteText}
@@ -143,6 +209,7 @@ const CategoryView = ({bannerText}) => {
               title={i.title}
               price={i.price}
               description={i.description}
+              location={i.location}
               createdAt={i.created_at}
               />
             ))}

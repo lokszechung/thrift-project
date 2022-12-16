@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.exceptions import PermissionDenied
 from django.contrib.auth import get_user_model
 
-from .serializers.common import UserSerializer
+from .serializers.common import UserSerializer, UserRegisterSerializer
 
 from datetime import datetime, timedelta
 import jwt
@@ -24,7 +24,7 @@ class RegisterView(APIView):
 
     def post(self, request):
         try:
-            user_to_register = UserSerializer(data=request.data)
+            user_to_register = UserRegisterSerializer(data=request.data)
             if user_to_register.is_valid():
                 user_to_register.save()
                 return Response('Registration successful', status.HTTP_201_CREATED)

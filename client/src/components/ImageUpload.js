@@ -19,7 +19,7 @@ const ImageUpload = ({ formFields, setFormFields }) => {
   return (
     <FormControl
       margin='dense'
-      required
+      value={formFields.image}
     >
       <InputLabel htmlFor="image">Image</InputLabel>
       <OutlinedInput

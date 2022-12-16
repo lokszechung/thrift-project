@@ -36,7 +36,7 @@ const SellView = () => {
         },
       })
       console.log('submit successful', data.id)
-      navigate(`/${data.id}`)
+      navigate(`/listings/${data.id}`)
     } catch (err) {
       console.log(err)
       setErrors(err.response.data)

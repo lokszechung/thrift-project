@@ -97,11 +97,11 @@ const NavBar = () => {
             }}
           >
             {/* <Badge badgeContent={17} color='error'> */}
-            <Bookmark />
+            <Bookmark onClick={() => navigate('/saved')}/>
             {/* </Badge> */}
           </IconButton>
         </Tooltip>
-        <Tooltip title={isAuthenticated() ? 'My Profile' : 'Log in' }>
+        <Tooltip title={isAuthenticated() ? 'My Profile' : 'Log In / Register' }>
           <IconButton
             size='medium'
             edge='end'
