@@ -13,7 +13,7 @@ const FeaturedItem = ( { image, price, title, owner, id } ) => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        const { data } = await axios.get('/api/auth/users')
+        const { data } = await axios.get('/api/auth/users/')
         setUsers(data)
       } catch (err) {
         console.log(err)
@@ -22,7 +22,7 @@ const FeaturedItem = ( { image, price, title, owner, id } ) => {
     getUsers()
   },[])
 
-  const itemOwner = users.find(user => user.id === owner )
+  // const itemOwner = users.find(user => user.id === owner )
 
   const navigate = useNavigate()
   return (

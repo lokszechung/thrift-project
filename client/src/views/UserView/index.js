@@ -29,7 +29,7 @@ const UserView = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const { data } = await axios.get(`/api/auth/profile/${userId}`)
+        const { data } = await axios.get(`/api/auth/profile/${userId}/`)
         setUser(data)
       } catch (err) {
         console.log(err)
