@@ -92,7 +92,6 @@ class UserProfileView(APIView):
             headers = request.headers.get('Authorization')
             token = headers.replace('Bearer ', '')
             payload = jwt.decode(token, settings.SECRET_KEY, 'HS256')
-            print('payload sub -> ', payload['sub'])
             user = User.objects.get(pk=payload['sub'])
             populated_serialized_user = PopulatedUserSerializer(user)
             return Response(populated_serialized_user.data)
