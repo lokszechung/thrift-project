@@ -26,6 +26,10 @@ const RegisterView = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
+      // const emptyFields = formFields.filter(field => !field)
+      // if (emptyFields.length > 0){
+      //   throw new Error()
+      // }
       await axios.post('/api/auth/register/', formFields)
       console.log('Register successful')
       navigate('/login')
@@ -42,7 +46,7 @@ const RegisterView = () => {
     }
     setFormFields(updatedFormFields)
 
-    if (error) setError('')
+    if (error) setError(null)
   }  
 
   useEffect(() => {
@@ -62,7 +66,7 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.first_name[0]}</small>}
+          {error && <small>{error.first_name?.[0]}</small>}
           <TextField 
             required
             onChange={handleChange}
@@ -71,7 +75,16 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.last_name[0]}</small>}
+          {error && <small>{error.last_name?.[0]}</small>}
+          <TextField 
+            required
+            onChange={handleChange}
+            name='username'
+            label='Username'
+            variant='outlined'
+            margin='dense'
+          />
+          {error && <small>{error.username?.[0]}</small>}
           <TextField 
             required
             onChange={handleChange}
@@ -81,7 +94,7 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.email[0]}</small>}
+          {error && <small>{error.email?.[0]}</small>}
           <TextField 
             required
             onChange={handleChange}
@@ -90,7 +103,7 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.telephone[0]}</small>}
+          {error && <small>{error.telephone?.[0]}</small>}
           <TextField 
             required
             onChange={handleChange}
@@ -100,7 +113,7 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.password[0]}</small>}
+          {error && <small>{error.password?.[0]}</small>}
           <TextField 
             required
             onChange={handleChange}
@@ -110,7 +123,7 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.password_confirmation[0]}</small>}
+          {error && <small>{error.password_confirmation?.[0]}</small>}
         </div>
         <Button onClick={handleSubmit} text='Register' type='primary' />
       </form>
