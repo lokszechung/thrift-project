@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './styles.scss'
 import {Box} from '@mui/material'
-import FeaturedItem from '../../components/FeaturedItem'
+import FeaturedItem from '../../components/featuredItem'
 
 const HomeView = () => {
   const containerPadding = {

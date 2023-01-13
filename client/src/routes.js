@@ -1,17 +1,17 @@
 import {Routes, Route} from 'react-router-dom'
 
 // Views
-import HomeView from './views/HomeView'
-import CategoryView from './views/CategoryView'
-import ProductView from './views/ProductView'
-import UserView from './views/UserView'
-import RegisterView from './views/RegisterView'
-import LoginView from './views/LoginView'
-import SellView from './views/SellView'
-import ProfileView from './views/ProfileView'
-import ProductEditView from './views/ProductEditView'
-import NotFoundView from './views/NotFoundView'
-import SavedView from './views/SavedView'
+import HomeView from './views/homeView'
+import CategoryView from './views/categoryView'
+import ProductView from './views/productView'
+import UserView from './views/userView'
+import RegisterView from './views/registerView'
+import LoginView from './views/loginView'
+import SellView from './views/sellView'
+import ProfileView from './views/profileView'
+import ProductEditView from './views/productEditView'
+import NotFoundView from './views/notFoundView'
+import SavedView from './views/savedView'
 
 export const categoryRoutes = [
   'Home & Garden',

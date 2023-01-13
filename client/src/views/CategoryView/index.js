@@ -1,14 +1,14 @@
 import React, {useState, useRef, useEffect, useCallback} from 'react'
 import './styles.scss'
 import {useLocation, useNavigate} from 'react-router-dom'
-import ProductFilterBar from '../../components/ProductFilterBar'
+import ProductFilterBar from '../../components/productFilterBar'
 import TuneIcon from '@mui/icons-material/Tune'
 import useWindowDimensions from '../../utils/useWindowDimensions'
 // import useOnScreen from '../../utils/useOnScreen'
-import ProductCard from '../../components/ProductCard'
+import ProductCard from '../../components/productCard'
 import axios from 'axios'
 
-import {subcategoriesIndexed, conditions} from '../../components/ProductFilterBar/subcategories'
+import {subcategoriesIndexed, conditions} from '../../components/productFilterBar/subcategories'
 
 const CategoryView = ({bannerText}) => {
   const {pathname} = useLocation()

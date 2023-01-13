@@ -3,8 +3,8 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import './styles.css';
 
 // components
-import NavBar from './components/NavBar';
-import CategoryBar from './components/CategoryBar';
+import NavBar from './components/navBar';
+import CategoryBar from './components/categoryBar';
 
 const App = () => {
   return (

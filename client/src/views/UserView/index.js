@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import {Box} from '@mui/material'
-import Button from '../../components/Button'
+import Button from '../../components/button'
 import './styles.scss';
-import ProductFilterBar from '../../components/ProductFilterBar'
-import FeaturedItem from '../../components/FeaturedItem'
+import ProductFilterBar from '../../components/productFilterBar'
+import FeaturedItem from '../../components/featuredItem'
 import axios from 'axios'
 import moment from 'moment'
 

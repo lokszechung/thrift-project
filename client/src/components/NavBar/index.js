@@ -16,7 +16,7 @@ import { isAuthenticated } from '../../utils/auth';
 
 // Components
 import MobileMenu from './MobileMenu';
-import SearchBar from '../SearchBar';
+import SearchBar from '../searchBar';
 
 const NavBar = () => {
   const navigate = useNavigate();

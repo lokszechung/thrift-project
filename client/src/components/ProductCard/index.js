@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Button'
+import Button from '../button'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import './styles.scss'
 import moment from 'moment'

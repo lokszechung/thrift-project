@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
 import {TextField, Box} from '@mui/material'
 
-import Button from '../../components/Button'
+import Button from '../../components/button'
 
 const RegisterView = () => {
 

@@ -3,7 +3,7 @@ import './styles.scss';
 import {subcategories, conditions} from './subcategories';
 import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
-import Button from '../../components/Button';
+import Button from '../button';
 
 const ProductFilterBar = ({
   route,

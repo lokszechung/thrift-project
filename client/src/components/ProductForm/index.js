@@ -1,10 +1,10 @@
 import './styles.scss'
 
-import Button from '../Button'
+import Button from '../button'
 import {Link} from 'react-router-dom'
 import ImageUpload from '../ImageUpload'
-import {categoryRoutes} from '../../../src/routes'
-import { subcategoriesIndexed } from '../ProductFilterBar/subcategories'
+import {categoryRoutes} from '../../routes'
+import { subcategoriesIndexed } from '../productFilterBar/subcategories'
 
 import {TextField, Box, FormControl, InputLabel, OutlinedInput, InputAdornment, MenuItem} from '@mui/material'
 import { useEffect, useState } from 'react'

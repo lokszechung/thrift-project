@@ -1,6 +1,6 @@
 import './styles.scss'
 
-import Button from '../../components/Button'
+import Button from '../../components/button'
 import { useNavigate } from 'react-router-dom'
 
 

@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import Button from '../../components/Button'
+import Button from '../../components/button'
 import './styles.scss'
 // import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 // import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
@@ -11,7 +11,7 @@ import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import moment from 'moment'
 import { getToken, isOwner } from '../../utils/auth'
-import {conditions} from '../../components/ProductFilterBar/subcategories'
+import {conditions} from '../../components/productFilterBar/subcategories'
 
 
 const ProductView = () => {

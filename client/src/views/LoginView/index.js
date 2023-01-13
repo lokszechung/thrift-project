@@ -7,7 +7,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import {TextField, Box} from '@mui/material'
 
 import { setToken } from '../../utils/auth.js'
-import Button from '../../components/Button'
+import Button from '../../components/button'
 
 const LoginView = () => {
 
