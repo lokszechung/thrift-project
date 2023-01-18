@@ -26,12 +26,7 @@ const RegisterView = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      // const emptyFields = formFields.filter(field => !field)
-      // if (emptyFields.length > 0){
-      //   throw new Error()
-      // }
       await axios.post('/api/auth/register/', formFields)
-      console.log('Register successful')
       navigate('/login')
     } catch (err) {
       console.log(err.response.data)
@@ -48,10 +43,6 @@ const RegisterView = () => {
 
     if (error) setError(null)
   }  
-
-  useEffect(() => {
-    console.log(formFields)
-  }, [formFields])
 
   return(
     <Box className='register-form-container'>
@@ -113,7 +104,7 @@ const RegisterView = () => {
             variant='outlined'
             margin='dense'
           />
-          {error && <small>{error.password?.[0]}</small>}
+          {error && <small>{error.password?.[0] || error.non_field_errors?.[0]}</small>}
           <TextField 
             required
             onChange={handleChange}

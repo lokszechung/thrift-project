@@ -1,10 +1,10 @@
-.not-found-container{
+.saved-container{
   .image-container{
-    height: calc(100vh);
-    background-image: url('../../../public/resources/img/watch_this_space.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px -365px;
+    height: calc(100vh - 137.69px);
+    background-image: url('../../img/watch_this_space.jpg');
+    background-repeat: repeat;
+    background-size:contain;
+    background-position: 50% 0;
   }
   div{
     display: flex;

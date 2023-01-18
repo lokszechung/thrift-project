@@ -9,28 +9,28 @@ import {
   Badge,
   Box,
   Tooltip
-} from '@mui/material';
+} from '@mui/material'
 
-import {Menu, AddCircle, Bookmark, AccountCircle} from '@mui/icons-material';
-import { isAuthenticated } from '../../utils/auth';
+import {Menu, AddCircle, Bookmark, AccountCircle} from '@mui/icons-material'
+import { isAuthenticated } from '../../utils/auth'
 
 // Components
-import MobileMenu from './MobileMenu';
-import SearchBar from '../searchBar';
+import MobileMenu from './MobileMenu'
+import SearchBar from '../searchBar'
 
 const NavBar = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
-  };
+  }
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
-  };
+  }
 
   const menuId = 'primary-search-account-menu';
   const mobileMenuId = 'primary-search-account-menu-mobile';
@@ -40,7 +40,7 @@ const NavBar = () => {
     md: 10,
     lg: 30,
     xl: 47
-  };
+  }
 
   const toolBar = (
     <Toolbar>
@@ -71,6 +71,8 @@ const NavBar = () => {
           }
         }}
       />
+
+      {/* <input /> */}
 
       <Box sx={{pl: 10, display: {xs: 'none', md: 'flex'}}}>
         <Tooltip title='Sell'>
@@ -108,7 +110,6 @@ const NavBar = () => {
             aria-label='account of current user'
             aria-controls={menuId}
             aria-haspopup='true'
-            // onClick={}
             color='inherit'
             sx={{
               ml: 0.75
@@ -131,7 +132,7 @@ const NavBar = () => {
         </IconButton>
       </Box>
     </Toolbar>
-  );
+  )
 
   return (
     <Box sx={{flexGrow: 1}}>
@@ -159,7 +160,7 @@ const NavBar = () => {
         mobileMenuId={mobileMenuId}
       />
     </Box>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

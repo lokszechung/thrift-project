@@ -41,8 +41,6 @@ const ProductView = () => {
     getSingleListing()
   },[])
 
-  // console.log(listing)
-
   useEffect(() => {
     const getUsers = async () => {
       try {
@@ -58,8 +56,6 @@ const ProductView = () => {
   // const handleUserDirect = (itemOwner) => {
   //   navigate(`/user/${itemOwner.id}`)
   // }
-
-  // console.log(users)
   
   const itemOwner = users && listing ? users.find(user => user.id === listing.owner) : null
 
@@ -136,18 +132,6 @@ const ProductView = () => {
               src={listing ? listing.image : null}
               alt={`${listing ? listing.title : 'product'}`}
             />
-            {/* <img
-              src='https://images.unsplash.com/photo-1611403119860-57c4937ef987?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80'
-              alt='chink'
-            />
-            <img
-              src='https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80'
-              alt='chink'
-            />
-            <img
-              src='https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80'
-              alt='chink'
-            /> */}
           </div>
         </div>
 
@@ -165,9 +149,7 @@ const ProductView = () => {
           {/* onClick={() => handleUserDirect(itemOwner)} */}
           { listing ? 
               (isOwner(listing.owner) ?
-                <>
-                  <Button text={`Edit or delete`} type='primary' onClick={() => navigate(`/${productId}/edit`)} />
-                </>
+                <Button text={`Edit or delete`} type='primary' onClick={() => navigate(`/${productId}/edit`)} />
                 :
                 <div>
                   <Button onClick={handleOpen} text={`Contact ${listing && users ? itemOwner.first_name : ''}`} />

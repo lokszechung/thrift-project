@@ -3,6 +3,7 @@ import axios from 'axios'
 import './styles.scss'
 import {Box} from '@mui/material'
 import FeaturedItem from '../../components/featuredItem'
+import alternativeThrift from '../../img/alternative_thrift.png'
 
 const HomeView = () => {
   const containerPadding = {
@@ -12,9 +13,7 @@ const HomeView = () => {
     xl: 47
   };
 
-  // const featured = [...Array(8).keys()];
   const [listings, setListings] = useState([])
-  // const [featured, setFeatured] = useState([])
 
   useEffect(() => {
     const getListings = async () => {
@@ -32,13 +31,12 @@ const HomeView = () => {
     return listing.featured === true
   })
 
-  console.log(featured)
 
   return (
     <div className='home-view-container'>
       <div className='jumbotron'>
         <img
-          src='../../resources/img/alternative_thrift.png'
+          src={alternativeThrift}
           alt='large-img-home'
         />
         <div className='jumboton-text'>

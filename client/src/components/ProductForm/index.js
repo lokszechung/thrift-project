@@ -60,9 +60,9 @@ const ProductForm = ({
     setSubcategoryOptions(subcategoriesIndexed[selectedCategory])
   }, [selectedCategory])
 
-  useEffect(() => {
-    console.log(formFields)
-  }, [formFields])
+  // useEffect(() => {
+  //   console.log(formFields)
+  // }, [formFields])
 
   return (
 

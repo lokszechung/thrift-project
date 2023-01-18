@@ -7,6 +7,17 @@ import useWindowDimensions from '../../utils/useWindowDimensions'
 // import useOnScreen from '../../utils/useOnScreen'
 import ProductCard from '../../components/productCard'
 import axios from 'axios'
+import collectibles from '../../img/banners/collectibles.png'
+import electronics from '../../img/banners/electronics.png'
+import fashion from '../../img/banners/fashion.png'
+import healthbeauty from '../../img/banners/health_&_beauty.png'
+import homegarden from '../../img/banners/home_&_garden.png'
+import jobs from '../../img/banners/jobs.png'
+import motors from '../../img/banners/motors.png'
+import pets from '../../img/banners/pets.png'
+import property from '../../img/banners/property.png'
+import sportsleisure from '../../img/banners/sports_&_leisure.png'
+import toys from '../../img/banners/toys.png'
 
 import {subcategoriesIndexed, conditions} from '../../components/productFilterBar/subcategories'
 
@@ -32,7 +43,7 @@ const CategoryView = ({bannerText}) => {
   const [categorisedListings, setCategorisedListings] = useState([])
   const [category, setCategory] = useState([])
 
-  const forceUpdate = useCallback((arr) => setCategorisedListings(arr), []);
+  const forceUpdate = useCallback((arr) => setCategorisedListings(arr), [])
 
   useEffect(() => {
     const getListings = async () => {
@@ -46,8 +57,6 @@ const CategoryView = ({bannerText}) => {
     getListings()
   }, [])
 
-  // console.log(listings)
-
   useEffect(() => {
     setCategory(listings.find(listing => listing.name === bannerText))
     const findCategory = category ? category.subcategories : null
@@ -58,10 +67,56 @@ const CategoryView = ({bannerText}) => {
     setCategorisedListings(listingArray)
   }, [bannerText, listings, category])
 
+  const bannerImage = [
+    {
+      path: '/home%20&%20garden',
+      url: homegarden
+    },
+    {
+      path: '/electronics',
+      url: electronics
+    },
+    {
+      path: '/fashion',
+      url: fashion
+    },
+    {
+      path: '/sports%20&%20leisure',
+      url: sportsleisure
+    },
+    {
+      path: '/health%20&%20beauty',
+      url: healthbeauty
+    },
+    {
+      path: '/toys',
+      url: toys
+    },
+    {
+      path: '/motors',
+      url: motors
+    },
+    {
+      path: '/collectibles',
+      url: collectibles
+    },
+    {
+      path: '/property',
+      url: property
+    },
+    {
+      path: '/jobs',
+      url: jobs
+    },
+    {
+      path: '/pets',
+      url: pets
+    }
+  ]
+
   const getImageUrlPath = () => {
-    const baseUrl = '../../resources/img/banners'
-    const formattedRoute = pathname.replaceAll('%20', '_')
-    return `${baseUrl}${formattedRoute}.png`
+    const findBannerObject = bannerImage.find(item => item.path === pathname)
+    return findBannerObject.url
   }
 
   const formattedRouteText = bannerText.toLowerCase().replaceAll(' ', '')
@@ -69,7 +124,6 @@ const CategoryView = ({bannerText}) => {
   const sort = (sortFn, prev) => prev.sort(sortFn)
 
   const sortListingsByDropdownOption = (value) => {
-
       const sortFnMap = {
         'a-z': (a,b) => a.title.localeCompare(b.title),
         'z-a': (a,b) => b.title.localeCompare(a.title),
@@ -85,9 +139,7 @@ const CategoryView = ({bannerText}) => {
     <div className='sort-dropdown'>
       <p>Sort by:</p>
       <select
-        // value={selectedListingOrder}
         onChange={(e) => sortListingsByDropdownOption(e.target.value)
-          // setSelectedListingOrder(e.target.value)
         }
       >
         <option value='a-z'>A-Z</option>
@@ -105,7 +157,6 @@ const CategoryView = ({bannerText}) => {
   // sortListingsByDropdownOption()
 
   const applyFilters = () => {
-    console.log(listings)
     if (isMobileScreen) {
       setShowFilterModal(false)
     }
@@ -113,27 +164,16 @@ const CategoryView = ({bannerText}) => {
     const {price, radius, condition, subcategory} = selectedFilters
 
     const filteredListings = rawListings.filter(listing => {
-      // console.log({listing, price, condition, subcategory})
       const findSubcategoryIndex = subcategoriesIndexed[bannerText.toLowerCase().replaceAll(' ','')].find(category => category.value === listing.subcategory)?.label
-      console.log(findSubcategoryIndex)
       const findConditionIndex = conditions[listing.condition - 1]
-      console.log(findConditionIndex)
       return findSubcategoryIndex === subcategory && (condition.length === 0 || condition.includes(findConditionIndex)) && parseFloat(listing.price) <= price
     })  
 
-    // listing.category === category
-    // condition.includes(listing.condition)
-    // listing.price <= price
     setCategorisedListings(filteredListings)
-  };
+  }
 
-  // useEffect(() => {
-  //   console.log(categorisedListings)
-  // }, [categorisedListings])
-  // const arrFake = [...Array(10).keys()];
 
   const handleProductDirect = (product) => {
-    console.log(product.id)
     navigate(`/listings/${product.id}`)
   }
 
@@ -142,15 +182,15 @@ const CategoryView = ({bannerText}) => {
       const {condition} = selectedFilters;
       const updatedSelectedConditions = condition.includes(value)
         ? condition.filter((c) => c !== value)
-        : [...condition, value];
+        : [...condition, value]
       return setSelectedFilters({
         ...selectedFilters,
         condition: updatedSelectedConditions
-      });
+      })
     }
 
-    return setSelectedFilters({...selectedFilters, [key]: value});
-  };
+    return setSelectedFilters({...selectedFilters, [key]: value})
+  }
 
   const handleClear = () => {
     setSelectedFilters({

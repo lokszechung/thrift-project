@@ -31,7 +31,6 @@ const SellView = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/listings/${productId}/`)
-        console.log(data)
         setFormFields(data)
       } catch (err) {
         console.log(err)
@@ -43,14 +42,12 @@ const SellView = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('submit clicked')
     try {
       const { data } = await axios.put(`/api/listings/${productId}/`, formFields, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-      console.log('submit successful', data.id)
       navigate(`/listings/${data.id}`)
     } catch (err) {
       console.log(err)

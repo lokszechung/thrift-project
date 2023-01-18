@@ -9,13 +9,8 @@ const SavedView = () => {
   // const navigate = useNavigate()
 
   return (
-    <div className='not-found-container'>
+    <div className='saved-container'>
       <div className='image-container'></div>
-      {/* <div>
-        <h2>Not Found</h2>
-        <p>How did you end up here?</p>
-        <Button text='Home' onClick={() => navigate('/')}/>
-      </div> */}
     </div>
   )
 

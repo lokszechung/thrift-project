@@ -6,6 +6,7 @@ import ProductFilterBar from '../../components/productFilterBar'
 import FeaturedItem from '../../components/featuredItem'
 import axios from 'axios'
 import moment from 'moment'
+import emptyImage from '../../img/empty_image.jpeg'
 
 import { getToken, handleLogout } from '../../utils/auth'
 import { useNavigate } from 'react-router-dom';
@@ -67,7 +68,7 @@ const UserView = () => {
     >
       <div className='seller-header-info'>
         <img
-          src={user.image ? user.image : '../../resources/img/empty_image.jpeg'}
+          src={user.image ? user.image : emptyImage}s
           alt='profile-img'
         />
         <div className='seller-info-text'>

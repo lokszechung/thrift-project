@@ -1,7 +1,7 @@
 .not-found-container{
   .image-container{
     height: calc(100vh - 137.69px);
-    background-image: url('../../../public/resources/img/not_found.jpg');
+    background-image: url('../../img/not_found.jpg');
     filter: brightness(70%) grayscale(.5);
     translate: 0 0%;
   }
