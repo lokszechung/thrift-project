@@ -12,7 +12,7 @@ import ProfileView from './views/profileView'
 import ProductEditView from './views/productEditView'
 import NotFoundView from './views/notFoundView'
 import SavedView from './views/savedView'
-
+// category routes
 export const categoryRoutes = [
   'Home & Garden',
   'Electronics',
