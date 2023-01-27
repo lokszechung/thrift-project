@@ -11,7 +11,7 @@ const HomeView = () => {
     md: 10,
     lg: 30,
     xl: 47
-  };
+  }
 
   const [listings, setListings] = useState([])
 

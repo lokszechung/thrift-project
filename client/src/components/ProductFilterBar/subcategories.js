@@ -128,9 +128,9 @@ export const subcategories = {
     'Other Jobs'
   ],
   pets: ['Pets For Sale', 'Equipment & Accessories', 'Missing, Lost & Found']
-};
+}
 
-export const conditions = ['New', 'Excellent', 'Very Good', 'Good', 'Used', 'Poor'];
+export const conditions = ['New', 'Excellent', 'Very Good', 'Good', 'Used', 'Poor']
 
 
 
