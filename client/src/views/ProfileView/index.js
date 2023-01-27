@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {Box} from '@mui/material'
 import Button from '../../components/button'
-import './styles.scss';
+import './styles.scss'
 import ProductFilterBar from '../../components/productFilterBar'
 import FeaturedItem from '../../components/featuredItem'
 import axios from 'axios'
@@ -9,7 +9,7 @@ import moment from 'moment'
 import emptyImage from '../../img/empty_image.jpeg'
 
 import { getToken, handleLogout } from '../../utils/auth'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 const UserView = () => {
 
@@ -22,7 +22,7 @@ const UserView = () => {
     md: 6,
     lg: 15,
     xl: 33
-  };
+  }
 
   const applyFilters = () => {
     setShowFilterModal(false)

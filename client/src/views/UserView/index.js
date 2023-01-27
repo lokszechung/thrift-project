@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import {Box} from '@mui/material'
 import Button from '../../components/button'
-import './styles.scss';
+import './styles.scss'
 import ProductFilterBar from '../../components/productFilterBar'
 import FeaturedItem from '../../components/featuredItem'
 import axios from 'axios'
@@ -16,7 +16,7 @@ const UserView = () => {
     md: 6,
     lg: 15,
     xl: 33
-  };
+  }
 
   const applyFilters = () => {
     setShowFilterModal(false)

@@ -94,7 +94,7 @@ const SearchBar = ({containterStyles}) => {
       marginLeft: theme.spacing(3),
       width: 'auto'
     }
-  }));
+  }))
 
   const SearchIconWrapper = styled('div')(({theme}) => ({
     padding: theme.spacing(0, 2),
@@ -104,7 +104,7 @@ const SearchBar = ({containterStyles}) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
-  }));
+  }))
 
   const StyledInputBase = styled(InputBase)(({theme}) => ({
     color: 'inherit',
@@ -114,7 +114,7 @@ const SearchBar = ({containterStyles}) => {
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create('width')
     }
-  }));
+  }))
 
   return (
     <Search className='search-bar' sx={{...containterStyles}}>
@@ -149,7 +149,7 @@ const SearchBar = ({containterStyles}) => {
         }
       </div>}
     </Search>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

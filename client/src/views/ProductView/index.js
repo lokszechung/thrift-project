@@ -16,7 +16,7 @@ import {conditions} from '../../components/productFilterBar/subcategories'
 
 const ProductView = () => {
   // const carousel = useRef()
-  // const noOfImgs = 4;
+  // const noOfImgs = 4
   // const [currentImgIndex, setCurrentImgIndex] = useState(1)
 
   const navigate = useNavigate()
@@ -70,29 +70,29 @@ const ProductView = () => {
   // const handleCarouselSlider = (direction) => {
   //   const preventTransition =
   //     (direction === 'back' && currentImgIndex === 1) ||
-  //     (direction === 'forward' && currentImgIndex === noOfImgs);
+  //     (direction === 'forward' && currentImgIndex === noOfImgs)
 
   //   if (preventTransition) {
-  //     return;
+  //     return
   //   }
 
-  //   const element = carousel.current;
+  //   const element = carousel.current
   //   const currentTransition =
-  //     +element.style.transform.match(/\(([^)]+)\)/)?.[1].replace('px', '') || 0;
+  //     +element.style.transform.match(/\(([^)]+)\)/)?.[1].replace('px', '') || 0
 
   //   const pxToMove =
-  //     direction === 'back' ? currentTransition + 500 : currentTransition - 500;
+  //     direction === 'back' ? currentTransition + 500 : currentTransition - 500
 
-  //   element.style.transform = `translateX(${pxToMove}px)`;
-  //   setCurrentImgIndex((prev) => (direction === 'back' ? prev - 1 : prev + 1));
-  // };
+  //   element.style.transform = `translateX(${pxToMove}px)`
+  //   setCurrentImgIndex((prev) => (direction === 'back' ? prev - 1 : prev + 1))
+  // }
 
   const containerPadding = {
     xs: 3,
     md: 6,
     lg: 15,
     xl: 33
-  };
+  }
 
   const style = {
     position: 'absolute',
@@ -184,7 +184,8 @@ const ProductView = () => {
         ></ReactMapGL>
       </div> */}
     </Box>
-  );
-};
+  )
+}
 
-export default ProductView;
+export default ProductView
+

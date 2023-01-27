@@ -20,20 +20,20 @@ import SearchBar from '../searchBar'
 
 const NavBar = () => {
   const navigate = useNavigate()
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
 
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
 
   const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
+    setMobileMoreAnchorEl(null)
   }
 
   const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
+    setMobileMoreAnchorEl(event.currentTarget)
   }
 
-  const menuId = 'primary-search-account-menu';
-  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const menuId = 'primary-search-account-menu'
+  const mobileMenuId = 'primary-search-account-menu-mobile'
 
   const containerPadding = {
     xs: 2,

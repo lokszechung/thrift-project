@@ -1,10 +1,10 @@
-import {routes} from './routes';
-import {BrowserRouter as Router} from 'react-router-dom';
-import './styles.css';
+import {routes} from './routes'
+import {BrowserRouter as Router} from 'react-router-dom'
+import './styles.css'
 
 // components
-import NavBar from './components/navBar';
-import CategoryBar from './components/categoryBar';
+import NavBar from './components/navBar'
+import CategoryBar from './components/categoryBar'
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <CategoryBar />
       {routes}
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App

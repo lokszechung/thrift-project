@@ -1,9 +1,9 @@
-import React from 'react';
-import './styles.scss';
-import {subcategories, conditions} from './subcategories';
-import Stack from '@mui/material/Stack';
-import Slider from '@mui/material/Slider';
-import Button from '../button';
+import React from 'react'
+import './styles.scss'
+import {subcategories, conditions} from './subcategories'
+import Stack from '@mui/material/Stack'
+import Slider from '@mui/material/Slider'
+import Button from '../button'
 
 const ProductFilterBar = ({
   route,
@@ -15,10 +15,10 @@ const ProductFilterBar = ({
   applyFilters,
   isModal
 }) => {
-  const {subcategory, price, radius} = selectedFilters;
+  const {subcategory, price, radius} = selectedFilters
   const subcategoriesToMapThrough = route
     ? subcategories[route]
-    : sellerCategories;
+    : sellerCategories
 
   const listOfSubCategories = subcategoriesToMapThrough.map((category) => (
     <div
@@ -29,7 +29,7 @@ const ProductFilterBar = ({
       {/* TODO: slot in number of items per category */}
       {/* <span>20</span> */}
     </div>
-  ));
+  ))
 
   const getConditionCheckBoxes = conditions.map((condition) => (
     <div className='checkbox-row'>
@@ -40,11 +40,11 @@ const ProductFilterBar = ({
       />
       <p>{condition}</p>
     </div>
-  ));
+  ))
 
   const buildRangeSlider = (min, max, labels, value) => {
-    const [minRangeLabel, maxRangeLabel] = labels;
-    const isPriceSlider = minRangeLabel.includes('£');
+    const [minRangeLabel, maxRangeLabel] = labels
+    const isPriceSlider = minRangeLabel.includes('£')
     return (
       <Stack spacing={3} direction='row' sx={{mb: 1}} alignItems='center'>
         <span>{minRangeLabel}</span>
@@ -55,25 +55,25 @@ const ProductFilterBar = ({
           max={max}
           value={value}
           onChange={(e) => {
-            const key = isPriceSlider ? 'price' : 'radius';
-            return onChangeFilters(key, e.target.value);
+            const key = isPriceSlider ? 'price' : 'radius'
+            return onChangeFilters(key, e.target.value)
           }}
         />
         <span>{maxRangeLabel}</span>
       </Stack>
-    );
-  };
+    )
+  }
 
-  let containerClassName = 'filter-bar-container';
+  let containerClassName = 'filter-bar-container'
 
   if (!showFilterModal) {
-    containerClassName += ' closed';
+    containerClassName += ' closed'
   }
   // if (isSticky) {
-  //   containerClassName += ' sticky';
+  //   containerClassName += ' sticky'
   // }
   if (isModal) {
-    containerClassName += ' modal-view';
+    containerClassName += ' modal-view'
   }
 
   return (
@@ -101,7 +101,7 @@ const ProductFilterBar = ({
         <Button onClick={applyFilters} type='primary' text='Apply' />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductFilterBar;
+export default ProductFilterBar

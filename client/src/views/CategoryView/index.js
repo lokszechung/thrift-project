@@ -151,9 +151,9 @@ const CategoryView = ({bannerText}) => {
     </div>
   )
 
-  const isMobileScreen = useWindowDimensions().width <= 900;
+  const isMobileScreen = useWindowDimensions().width <= 900
   // let isMobileScreen
-  // const isStickySidebar = useOnScreen(bannerRef);
+  // const isStickySidebar = useOnScreen(bannerRef)
   // sortListingsByDropdownOption()
 
   const applyFilters = () => {
@@ -179,7 +179,7 @@ const CategoryView = ({bannerText}) => {
 
   const onChangeFilters = (key, value) => {
     if (key === 'condition') {
-      const {condition} = selectedFilters;
+      const {condition} = selectedFilters
       const updatedSelectedConditions = condition.includes(value)
         ? condition.filter((c) => c !== value)
         : [...condition, value]
