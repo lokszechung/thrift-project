@@ -7,7 +7,7 @@ The aim of this project was to create a full-stack application using Django REST
 - **Project timeframe:** 7 days
 - **Team size:** Solo project
 
-[Check it out here!](https://thrift-project.herokuapp.com/) (Link not yet live 😢)
+[Check it out here!](https://thrift-project.herokuapp.com/)
 
 ![Thrift Landing Page](/readme-images/thrift-1.png)
 _&uarr; Landing Page &uarr;_
